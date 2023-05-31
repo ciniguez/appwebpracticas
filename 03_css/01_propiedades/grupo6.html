@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento Estatico y Fijo (Stactic & Fixed)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f8f8f8;
+        }
+
+        .static {
+            position: static;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Atributo</th>
+                <th>Ejemplo</th>
+                <th>Implementacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Estatico</td>
+                <td>position: static;</td>
+                <td>
+                    <code>div.static {<br>
+                        &nbsp;&nbsp;position: static;<br>
+                        &nbsp;&nbsp;border: 3px solid #73AD21;<br>
+                    }</code>
+                </td>
+                <td>
+                    <p class="static">Hola</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Fijo</td>
+                <td>position: fixed;</td>
+                <td>
+                    <code>div.fixed {<br>
+                        &nbsp;&nbsp;position: fixed;<br>
+                        &nbsp;&nbsp;bottom: 0;<br>
+                        &nbsp;&nbsp;right: 0;<br>
+                        &nbsp;&nbsp;width: 300px;<br>
+                        &nbsp;&nbsp;border: 3px solid #73AD21;<br>
+                    }</code>
+                </td>
+                <td>
+                    <p>Mirar a la esquina inferior derecha</p>
+                    <p class="fixed">Hola</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
