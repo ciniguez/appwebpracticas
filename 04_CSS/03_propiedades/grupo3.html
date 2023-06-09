@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLAS</title>
+    <style>
+        /*BORDES*/
+       /* Estilo de borde sólido */
+    #groove {
+        border: 2px solid black;
+    }
+
+    /* Estilo de borde punteado */
+    #dotted {
+        border: 2px dotted black;
+    }
+
+    
+
+    /* Estilo de borde con sombra */
+    #shadow {
+        border: 2px solid black;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+     /* Estilo de borde con bordes redondeados */
+     #rounded {
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    /*RESPONSIVE*/
+ 
+        th, td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid #ddd;
+        }
+        .responsive-x{
+            overflow-x: auto; 
+        }
+
+        .responsive-y{
+            max-height: 300px;
+            overflow-y: auto;
+
+        }
+        td{
+            height: 50px;
+        }
+        .enlinea{
+            display: inline;
+        }
+
+
+        /*alineamiento*/
+
+        .horizontal{
+            text-align: center;
+            border: 1px solid;
+        }
+
+        .vertical{
+            vertical-align: bottom;
+            border: 1px solid;
+        }
+
+        table{
+            width: 100%;
+            
+            border: 1px solid;
+        }
+
+        /*stilos*/
+
+        tr.divider {
+      border-top: 1px solid #ddd;
+    }
+
+    tr.hoverable:hover {
+      background-color: #f5f5f5;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+    
+  tr:nth-child(even) {
+      background-color: #e6e6e6;
+    }
+    
+    tr:nth-child(odd) {
+      background-color: #f5f5f5;
+    }
+
+    .highlight {
+      background-color: #ffd700;
+    }
+    
+    .warning {
+      background-color: #ff0000;
+      color: #fff;
+    }
+    </style>
+</head>
+<body>
+<h1>TABLAS</h1>
+<p>Grupo 3</p>
+
+
+
+<h2>border-style</h2>
+<p>border-style : groove</p>
+
+<table id="groove">
+    <tr>
+        <th>titulo 1</th>
+        <th>titulo 2</th>
+    </tr>
+    <tr>
+        <td> dato 1</td>
+        <td> datos 2</td>
+    </tr>
+</table>
+
+<p>border-style : dotted</p>
+
+<table id="dotted">
+    <tr>
+        <th>titulo 1</th>
+        <th>titulo 2</th>
+    </tr>
+    <tr>
+        <td> dato 1</td>
+        <td> datos 2</td>
+    </tr>
+</table>
+
+
+<h2>border-rouded</h2>
+
+<table id="rounded"> 
+    <tr>
+        <th>titulo 1</th>
+        <th>titulo 2</th>
+    </tr>
+    <tr>
+        <td> dato 1</td>
+        <td> datos 2</td>
+    </tr>
+</table>
+
+<h2>box-shadow</h2>
+
+<table id="shadow">
+    <tr>
+        <th>titulo 1</th>
+        <th>titulo 2</th>
+    </tr>
+    <tr>
+        <td> dato 1</td>
+        <td> datos 2</td>
+    </tr>
+</table>
+
+<h2>RESPONSIVE</h2>
+<p class="enlinea">Cuando una tabla tiene demasiadas columnas, se utiliza: <p class="enlinea" style="font-weight: bold;">"overflow-x=auto"</p>para poder hacer scroll en la propia tabla</p>
+    <p class="enlinea">Cuando una tabla tiene demasiadas filas, se utiliza <p class="enlinea" style="font-weight: bold;">"overflow-y=auto"</p> para poder hacer scroll en la propia tabla</p>
+    <div class="responsive-x responsive-y">
+    <table>
+        <tr>
+            <th>Posision</th>
+            <th>Columna1</th>
+            <th>Columna2</th>
+            <th>Columna3</th>
+            <th>Columna4</th>
+            <th>Columna5</th>
+            <th>Columna6</th>
+            <th>Columna7</th>
+            <th>Columna8</th>
+            <th>Columna9</th>
+            <th>Columna10</th>
+            <th>Columna11</th>
+            <th>Columna12</th>
+            <th>Columna13</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>contenido 1</td>
+            <td>contenido 2</td> 
+            <td>contenido 3</td> 
+            <td>contenido 4</td>  
+            <td>contenido 5</td> 
+            <td>contenido 6</td> 
+            <td>contenido 7</td> 
+            <td>contenido 8</td> 
+            <td>contenido 9</td> 
+            <td>contenido 10</td> 
+            <td>contenido 11</td> 
+            <td>contenido 12</td> 
+            <td>contenido 13</td> 
+        </tr>
+    </table>
+</div>
+
+<h1>Tabla 1 - Alineamiento horizontal (Centrado)</h1>
+<table class="horizontal">
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Profesión</th>
+  </tr>
+  <tr>
+    <td>Juan</td>
+    <td>25</td>
+    <td>Ingeniero</td>
+  </tr>
+  <tr>
+    <td>María</td>
+    <td>30</td>
+    <td>Abogada</td>
+  </tr>
+  <tr>
+    <td>Carlos</td>
+    <td>35</td>
+    <td>Programador</td>
+  </tr>
+</table>
+
+<h1>Tabla 2 - Alineamiento vertical (Abajo)</h1>
+<table>
+  <tr class="vertical">
+    <th>Producto</th>
+    <th>Precio</th>
+    <th>Stock</th>
+  </tr>
+  <tr class="vertical">
+    <td>Camiseta</td>
+    <td>20</td>
+    <td>10</td>
+  </tr>
+  <tr class="vertical">
+    <td>Pantalón</td>
+    <td>30</td>
+    <td>5</td>
+  </tr>
+  <tr class="vertical">
+    <td>Zapatos</td>
+    <td>50</td>
+    <td>2</td>
+  </tr>
+</table>
+
+<h3> Estilos </h3>
+<p> Table Padding: Controla el espacio entre el borde y el contenido de la tabla.  </p> 
+<table>
+    <tr>
+      <th>Encabezado 1</th>
+      <th>Encabezado 2</th>
+      <th>Encabezado 3</th>
+    </tr>
+    <tr>
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+    </tr>
+    <tr>
+      <td>Celda 4</td>
+      <td>Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+    <tr>
+      <td>Celda 7</td>
+      <td>Celda 8</td>
+      <td>Celda 9</td>
+    </tr>
+  </table>
+  <br>
+  <p> Horizontal Dividers: Agregua la propiedad border-bottom para divisores horizontales:</p>
+  <table>
+    <tr>
+      <th>Encabezado 1</th>
+      <th>Encabezado 2</th>
+      <th>Encabezado 3</th>
+    </tr>
+    <tr>
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+    </tr>
+    <tr class="divider">
+      <td colspan="3"></td>
+    </tr>
+    <tr>
+      <td>Celda 4</td>
+      <td>Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+    <tr>
+      <td>Celda 7</td>
+      <td>Celda 8</td>
+      <td>Celda 9</td>
+    </tr>
+    <tr class="divider">
+      <td colspan="3"></td>
+    </tr>
+  </table>
+  <br>
+  <p>Hoverable Table: Use el selector :hover para resaltar las filas de la tabla al pasar el mouse por encima </p>
+
+  <table>
+    <tr>
+      <th>Encabezado 1</th>
+      <th>Encabezado 2</th>
+      <th>Encabezado 3</th>
+    </tr>
+    <tr class="hoverable">
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+    </tr>
+    <tr class="hoverable ">
+      <td>Celda 4</td>
+      <td>Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+    <tr class="hoverable">
+      <td>Celda 7</td>
+      <td>Celda 8</td>
+      <td>Celda 9</td>
+    </tr>
+  </table>
+  <br>
+  <p>Striped Tables: Coloreado tipo zebra </p>
+  <table>
+    <tr>
+      <th>Encabezado 1</th>
+      <th>Encabezado 2</th>
+      <th>Encabezado 3</th>
+    </tr>
+    <tr>
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+    </tr>
+    <tr>
+      <td>Celda 4</td>
+      <td>Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+    <tr>
+      <td>Celda 7</td>
+      <td>Celda 8</td>
+      <td>Celda 9</td>
+    </tr>
+  </table>
+  <p>Table Color : Coloreado</p>
+
+  <table>
+    <tr>
+      <th>Encabezado 1</th>
+      <th>Encabezado 2</th>
+      <th>Encabezado 3</th>
+    </tr>
+    <tr>
+      <td>Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+    </tr>
+    <tr>
+      <td>Celda 4</td>
+      <td class="highlight">Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+    <tr class="warning">
+      <td>Celda 7</td>
+      <td>Celda 8</td>
+      <td>Celda 9</td>
+    </tr>
+  </table>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{margin:0px; padding:0px}
+/*{border: 1px solid #ff0000;}*/
+body{font-family: Verdana, Geneva, Tahoma, sans-serif;}
+header{ height: 90px;}
+.header img{ width: 80px; height: 80px; float:left}
+#titulo{float:left}
+#login{float:right}
+nav{clear: both; 
+    background: linear-gradient(#0B3AB8 0%, #138DAA 40%,  #138DAA 60%, #0B3AB8 100% );
+    color:#FFFFFF;
+}
+nav ul{list-style-type: none;  text-align: center;}
+nav ul li{display: inline-block; margin:10px}
+nav ul li:hover{ color: #FFFF00}
+/* estilos de Sección */
+section h1:nth-child(1){ 
+    text-align: center;
+    margin-top:10px
+}
+/* Carta */
+.card{width: 250px; 
+    text-align: center; 
+    border:1px dashed #888;
+    border-radius: 0 0 8px 8px;
+}
+.imagen-superheroe{width: 250px; height: 250px;}
+.card img{ width:auto; height: 100%;}
