@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Estilos con JS</title>
+    <style>
+        .ejemplo {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cambio de Estilos con JS</h1>
+    <span>
+        <div class="ejemplo">DIV NORMAL</div>
+        <div class="ejemplo">DIV MODIFICADO</div>
+    </span>
+
+    <script>
+        // OBJETIVO: Cmabiar el borde negro a rojo
+        //FORMA 1
+        //var elemento = document.querySelector('span div:nth-child(2)');
+        //elemento.setAttribute('style', ' height: 100px; width: 100px; border: 2px solid red;');
+
+        //FORMA 2
+        // Considerar:
+        //1.- Propiedades CSS se escriben en kebab-case
+        //2.- CSS en kabab-case no puede ser utilizada en propiedad style manejada por JS
+        //3.- Entonces, las propiedadaes kebab-case se reemplazan por camelCase.
+        var elemento = document.querySelector('span div:nth-child(2)');
+        elemento.style.borderRadius = '50%';
+        elemento.style.display = 'flex';
+        elemento.style.justifyContent = 'center';
+        elemento.style.border = "2px solid red";
+
+    </script>
+
+</body>
+
+</html>

@@ -10,7 +10,7 @@ nav{clear: both;
     color:#FFFFFF;
 }
 nav ul{list-style-type: none;  text-align: center;}
-nav ul li{display: inline-block; margin:10px}
+nav ul li{ margin:10px}
 nav ul li:hover{ color: #FFFF00}
 /* estilos de Sección */
 section h1:nth-child(1){ 
