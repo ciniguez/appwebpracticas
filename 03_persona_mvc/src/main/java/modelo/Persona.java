@@ -1,6 +1,9 @@
 package modelo;
 
 import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,20 +11,29 @@ public class Persona implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	final String SQL_SELECT_ALL = "SELECT * FROM Persona;";
+	final String SQL_SELECT_BY_ID = "SELECT * FROM Persona WHERE id = ?";
+	final String SQL_INSERT = "INSERT INTO Persona (nombre, password, esadmin) VALUES (?,?,?)";
+	final String SQL_DELETE_BY_ID = "DELETE FROM Persona WHERE id = ?";
+	final String SQL_UPDATE = "UPDATE Persona SET nombre = ? , password = ?, esadmin = ? WHERE id= ?";
+	final String SQL_AUTORIZAR = "SELECT * FROM Persona WHERE nombre = ? AND password = ?";
+
 	private Integer id;
 	private String nombre;
 	private String password;
+	private Boolean esadmin;
 
-	private static List<Persona> personas = null;
+	// private static List<Persona> personas = null;
 
 	public Persona() {
 	}
 
-	public Persona(Integer id, String nombre, String password) {
+	public Persona(Integer id, String nombre, String password, boolean esadmin) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.password = password;
+		this.esadmin = esadmin;
 	}
 
 	public Integer getId() {
@@ -48,11 +60,19 @@ public class Persona implements Serializable {
 		this.password = password;
 	}
 
+	public Boolean getEsadmin() {
+		return esadmin;
+	}
+
+	public void setEsadmin(Boolean esadmin) {
+		this.esadmin = esadmin;
+	}
 	// REGLAS DEL NEGOCIO
 
 	public Persona autorizar(String usuario, String password) {
-		Persona personaAutorizada = null;
 		
+		Persona personaAutorizada = null;
+		/*
 		List<Persona> listaPersonas =  this.getPersonas();
 		
 		for (Persona persona : listaPersonas) {
@@ -63,25 +83,9 @@ public class Persona implements Serializable {
 				break;
 			}
 		}
+		*/
 		
-		return personaAutorizada;
-	}
-
-	public List<Persona> getPersonas() {
-		if (personas == null) {
-			personas = new ArrayList<>();
-
-			personas.add(new Persona(1, "Carlos", "carlos123"));
-			personas.add(new Persona(2, "Liz", "liz123"));
-			personas.add(new Persona(3, "Maria", "maria123"));
-			personas.add(new Persona(4, "Juan", "juan123"));
-		}
-		return personas;
-	}
-
-	public Persona getById(int id) {
-
-		Persona p = null;
+		/*
 
 		List<Persona> listPersonas = this.getPersonas();
 
@@ -91,35 +95,175 @@ public class Persona implements Serializable {
 				break;
 			}
 		}
+		*/
+		
+		try {
+			PreparedStatement pstm= BddConeccion.getConexion().prepareStatement(SQL_AUTORIZAR);
+			pstm.setString(1, usuario);
+			pstm.setString(2, password);
+			
+			ResultSet rs = pstm.executeQuery();
+			
+			while(rs.next()) {
+				Persona persona = new Persona();
+				persona.setId(rs.getInt("id"));
+				persona.setNombre(rs.getString("nombre"));
+				persona.setPassword(rs.getString("password"));
+				persona.setEsadmin(rs.getBoolean("esadmin"));
+				personaAutorizada = persona;
+			}
+			BddConeccion.cerrar(rs);
+			BddConeccion.cerrar(pstm);
+			BddConeccion.cerrar( );
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return personaAutorizada;
+	}
+
+	public List<Persona> getPersonas() {
+		/*
+		 * if (personas == null) { personas = new ArrayList<>();
+		 * 
+		 * personas.add(new Persona(1, "Carlos", "carlos123")); personas.add(new
+		 * Persona(2, "Liz", "liz123")); personas.add(new Persona(3, "Maria",
+		 * "maria123")); personas.add(new Persona(4, "Juan", "juan123")); }
+		 * 
+		 * return personas;
+		 */
+
+		// Conexion a BDD
+		List<Persona> listaPersonas = new ArrayList<>();
+
+		try {
+			PreparedStatement pstm = BddConeccion.getConexion().prepareStatement(SQL_SELECT_ALL);
+			ResultSet rs = pstm.executeQuery();
+
+			while (rs.next()) {
+				Persona persona = new Persona();
+				persona.setId(rs.getInt("id"));
+				persona.setNombre(rs.getString("nombre"));
+				persona.setPassword(rs.getString("password"));
+				persona.setEsadmin(rs.getBoolean("esadmin"));
+
+				listaPersonas.add(persona);
+			}
+			BddConeccion.cerrar(rs);
+			BddConeccion.cerrar(pstm);
+			BddConeccion.cerrar();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listaPersonas;
+
+	}
+
+	public Persona getById(int id) {
+
+		Persona p = null;
+
+		/*
+		 * 
+		 * List<Persona> listPersonas = this.getPersonas();
+		 * 
+		 * for (Persona persona : listPersonas) { if (persona.getId() == id) { p =
+		 * persona; break; } }
+		 */
+
+		try {
+			PreparedStatement pstm = BddConeccion.getConexion().prepareStatement(SQL_SELECT_BY_ID);
+			pstm.setInt(1, id);
+			ResultSet rs = pstm.executeQuery();
+
+			while (rs.next()) {
+				Persona persona = new Persona();
+				persona.setId(rs.getInt("id"));
+				persona.setNombre(rs.getString("nombre"));
+				persona.setPassword(rs.getString("password"));
+				persona.setEsadmin(rs.getBoolean("esadmin"));
+				p = persona;
+			}
+			BddConeccion.cerrar(rs);
+			BddConeccion.cerrar(pstm);
+			BddConeccion.cerrar();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
 		return p;
 	}
 
 	public void create(Persona p) {
-		this.getPersonas().add(p);
+		/*
+		 * this.getPersonas().add(p);
+		 */
+
+		try {
+			PreparedStatement pstm = BddConeccion.getConexion().prepareStatement(SQL_INSERT);
+			pstm.setString(1, p.getNombre());
+			pstm.setString(2, p.getPassword());
+			pstm.setBoolean(3, p.getEsadmin());
+
+			pstm.executeUpdate();
+
+			BddConeccion.cerrar(pstm);
+			BddConeccion.cerrar();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
 	}
 
 	public void update(Persona p) {
-		List<Persona> listaPersonas = this.getPersonas();
+		/*
+		 * List<Persona> listaPersonas = this.getPersonas();
+		 * 
+		 * for (int i = 0; i < listaPersonas.size(); i++) { if
+		 * (listaPersonas.get(i).getId() == p.getId()) {
+		 * listaPersonas.get(i).setNombre(p.getNombre());
+		 * listaPersonas.get(i).setPassword(p.getPassword()); break; } }
+		 */
 
-		for (int i = 0; i < listaPersonas.size(); i++) {
-			if (listaPersonas.get(i).getId() == p.getId()) {
-				listaPersonas.get(i).setNombre(p.getNombre());
-				listaPersonas.get(i).setPassword(p.getPassword());
-				break;
-			}
+		try {
+			PreparedStatement pstm = BddConeccion.getConexion().prepareStatement(SQL_UPDATE);
+			pstm.setString(1, p.getNombre());
+			pstm.setString(2, p.getPassword());
+			pstm.setBoolean(3, p.getEsadmin());
+			pstm.setInt(4, p.getId());
+
+			pstm.executeUpdate();
+
+			BddConeccion.cerrar(pstm);
+			BddConeccion.cerrar();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
 	public void delete(int id) {
-		List<Persona> listaPersonas = this.getPersonas();
+		/*
+		 * List<Persona> listaPersonas = this.getPersonas();
+		 * 
+		 * for (int i = 0; i < listaPersonas.size(); i++) { if
+		 * (listaPersonas.get(i).getId() == id) { listaPersonas.remove(i); break; } }
+		 */
+		try {
+			PreparedStatement pstm = BddConeccion.getConexion().prepareStatement(SQL_DELETE_BY_ID);
+			pstm.setInt(1, id);
 
-		for (int i = 0; i < listaPersonas.size(); i++) {
-			if (listaPersonas.get(i).getId() == id) {
-				listaPersonas.remove(i);
-				break;
-			}
+			pstm.executeUpdate();
+
+			BddConeccion.cerrar(pstm);
+			BddConeccion.cerrar();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
