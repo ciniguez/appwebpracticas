@@ -14,17 +14,12 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
-	<nav class="navbar navbar-dark bg-dark">
-		<div class="container-fluid">
-			<span class="navbar-brand mb-0 h1">Gestor Personas</span>
-			<span class="navbar-brand mb-0 h3">Usuario logeado: ${sessionScope.usuarioLogeado.getNombre()}</span>
-			<span class="navbar-brand mb-0 h3"><a class="text-decoration-none text-white" href="login.html">Salir</a></span>
-		</div>
-	</nav>
+
+	<%@include file='../templates/banner_inside.html' %>
 	
 	<h1>Listado de Personas</h1>
 
-	<div><a href="InsertarPersonaController">Nuevo</a></div>
+	<div><a href="GestorPersonaController?ruta=nuevo">Nuevo</a></div>
 	
 	
     
