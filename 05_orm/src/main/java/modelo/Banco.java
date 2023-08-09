@@ -46,11 +46,11 @@ public class Banco implements Serializable{
 	}
 
 	public List<CuentaBancaria> getCuantas() {
-		return cuantas;
+		return cuentas;
 	}
 
 	public void setCuantas(List<CuentaBancaria> cuantas) {
-		this.cuantas = cuantas;
+		this.cuentas = cuantas;
 	}
 	
 	
