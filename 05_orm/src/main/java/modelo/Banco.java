@@ -28,6 +28,15 @@ public class Banco implements Serializable{
 	private List<CuentaBancaria> cuentas;
 	
 	public Banco() {}
+	
+	
+
+	public Banco(Integer id, String nombreBanco) {
+		this.id = id;
+		this.nombreBanco = nombreBanco;
+	}
+
+
 
 	public Integer getId() {
 		return id;
@@ -51,6 +60,13 @@ public class Banco implements Serializable{
 
 	public void setCuantas(List<CuentaBancaria> cuantas) {
 		this.cuentas = cuantas;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Banco [id=" + id + ", nombreBanco=" + nombreBanco + ", cuentas=" + cuentas + "]";
 	}
 	
 	

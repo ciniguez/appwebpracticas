@@ -32,6 +32,16 @@ public class CuentaBancaria implements Serializable {
 	private Persona propietario;
 	
 	public CuentaBancaria () {}
+	
+
+	public CuentaBancaria(Integer id, String numero, Banco banco, Persona propietario) {
+
+		this.id = id;
+		this.numero = numero;
+		this.banco = banco;
+		this.propietario = propietario;
+	}
+
 
 	public Integer getId() {
 		return id;
@@ -63,6 +73,13 @@ public class CuentaBancaria implements Serializable {
 
 	public void setPropietario(Persona propietario) {
 		this.propietario = propietario;
+	}
+
+
+	@Override
+	public String toString() {
+		return "CuentaBancaria [id=" + id + ", numero=" + numero + ", banco=" + banco + ", propietario=" + propietario
+				+ "]";
 	}
 	
 	

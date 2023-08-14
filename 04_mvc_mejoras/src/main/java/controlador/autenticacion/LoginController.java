@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import modelo.dao.DAOFactory;
 import modelo.entidades.Persona;
+import modelo.jpa.DAOFactory;
 
 @WebServlet("/LoginController")
 public class LoginController extends HttpServlet {
@@ -72,7 +72,7 @@ public class LoginController extends HttpServlet {
 
 		// 2.- Llamo al Modelo para obtener datos
 
-		Persona personaAutenticada = DAOFactory.getFactory().getPersonaDAO().autorizar(nombre, clave);
+		Persona personaAutenticada = modelo.dao.DAOFactory.getFactory().getPersonaDAO().autorizar(nombre, clave);
 		
 		 
 		if (personaAutenticada != null) {

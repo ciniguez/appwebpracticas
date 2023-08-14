@@ -7,9 +7,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 @Entity
-@Table(name="Persona")
+@Table(name="Personaa")
+@NamedQueries({
+	@NamedQuery(name="autorizar", query="SELECT p FROM Persona p WHERE p.nombre= :nombre AND p.clave= :clave")
+})
 public class Persona implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -24,6 +29,16 @@ public class Persona implements Serializable {
 	private String clave;
 	
 	public Persona() {}
+	
+	
+
+	public Persona(Integer id, String nombre, String clave) {
+		this.id = id;
+		this.nombre = nombre;
+		this.clave = clave;
+	}
+
+
 
 	public Integer getId() {
 		return id;
@@ -48,6 +63,14 @@ public class Persona implements Serializable {
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Persona [id=" + id + ", nombre=" + nombre + ", clave=" + clave + "]";
+	}
+	
 	
 	
 }
