@@ -1,2 +1,4 @@
 .metadata/
 Servers/
+.DS_Store
+Servers/Tomcat v8.5 Server at localhost-config/server.xml
