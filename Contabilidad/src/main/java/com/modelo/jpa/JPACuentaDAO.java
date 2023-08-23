@@ -29,7 +29,7 @@ public class JPACuentaDAO extends JPAGenericDAO<Cuenta, Integer> implements Cuen
 	 */
 	@Override
 	public void ajustarSaldo(double valorFinal){
-
+		
 	}
 
 	/**
