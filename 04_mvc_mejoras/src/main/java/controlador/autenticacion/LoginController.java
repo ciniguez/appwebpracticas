@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import modelo.entidades.Persona;
-import modelo.jpa.DAOFactory;
 
 @WebServlet("/LoginController")
 public class LoginController extends HttpServlet {

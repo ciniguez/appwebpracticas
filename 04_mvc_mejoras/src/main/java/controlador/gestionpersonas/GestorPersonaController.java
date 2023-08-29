@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.dao.DAOFactory;
 import modelo.entidades.Persona;
 
 /**
@@ -86,7 +87,7 @@ public class GestorPersonaController extends HttpServlet {
 
 		// 2.- Llamo al Modelo para obtener datos
 		
-		List<Persona> lista = DAOFactory.getFactory().getPersonaDAO().getPersonas();
+		List<Persona> lista = DAOFactory.getFactory().getPersonaDAO().getAll();
 
 		// 3.- Llamo a la Vista
 
