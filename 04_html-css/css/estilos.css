@@ -1,0 +1,77 @@
+/*{border: 1px solid #FF0000}*/
+#menu-empresa {background: hsl(212, 100%, 50%); padding:15px}
+#menu-empresa ul{ display: inline;}
+#menu-empresa ul li{ padding:0px 15px;}
+#menu-empresa a {  color: #fff; text-decoration: none;}
+body{ font-family: Arial, Helvetica, sans-serif; font-size: 1.2rem;}
+@font-face {
+    font-family: 'mifuente';
+    src: url(../font/Blazed.ttf);
+}
+/* ***** HEADER ******/
+#logo{ font-family: mifuente; display: inline; color: #fff}
+header section ul{list-style-type: none; margin:0px}
+header section ul li{display: inline-block; }
+#menu-buscador{ background: #DDD; 
+    text-align: center; 
+    padding: 10px 0px;}
+#menu-continentes{ 
+    background: rgb(35,74,98);
+    /*background: linear-gradient(180deg, rgba(35,74,98,1) 0%, rgba(22,125,255,1) 16%, rgba(0,212,255,1) 85%, rgba(9,9,121,1) 100%);*/
+
+    color:#fff;
+    text-align: center;
+    padding: 10px;
+}
+#menu-continentes a{ 
+    color:#fff; 
+    text-decoration: none;}
+#menu-continentes ul li{ margin: 0 5px;}
+#buscador{ 
+    border-radius: 15px 0px 0px 15px;
+    padding: 15px;
+    border: 1px solid #999;
+}
+.btnBuscar{
+    border-radius: 0px 15px 15px 0px;
+    padding: 15px;
+    border: 1px solid #999;
+}
+
+/******** MAIN *****/
+#mapa_mundi{
+    height: 600px;
+    background-image: url("../img/mapamundi.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-mundi{ 
+    margin-left:300px; 
+    margin-top: 100px;
+    width: 400px; 
+    color:#fff;
+    background: rgba(35,74,98, 0.7);
+}
+.text-mundi h1{ color: #ffff00}
+
+/********** PROYECTOS ***********/
+#proyectos{
+    background: hsl(212, 100%, 15%);
+    text-align: center;
+    color: #fff;
+}
+#proyectos h1{
+    margin:0px;
+    padding: 30px 0px;
+}
+
+#proyectos article{
+    width: 33%;
+    display: inline-block;
+}
+#proyectos article h2{ color: #FFFF00; font-size: 1.2rem;}
+#proyectos article ul {list-style-type: none;}
+#proyectos article ul li{ display: inline-block;}
+#proyectos article ul li a{ text-decoration: none; color:#fff; margin:0px 20px;}
+#proyectos article img{ width: 200px; height:200px; border-radius: 50%;}
