@@ -177,6 +177,10 @@ public class Movimiento implements Serializable {
 	public List<Movimiento> getAllByCuenta(int idCuenta) {
 		return null;
 	}
+	
+	public static List<Movimiento> getAllByDate(Date fecha){
+		return null;
+	}
 
 	@Override
 	public String toString() {

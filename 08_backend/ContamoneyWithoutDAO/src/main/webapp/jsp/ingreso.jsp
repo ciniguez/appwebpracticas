@@ -50,7 +50,7 @@
         <div class="contenedor_form">
             <form action="RegistrarMovimientosController?ruta=guardaringreso" method="post">
             	
-            	<input type="hidden" value="${cuenta.id}" name="idCuenta"/>
+            	<!-- input type="hidden" value="${cuenta.id}" name="idCuenta"/-->
             
                 <label for="ingreso">Valor a ingresar</label>
                 <input id="ingreso" type="number" min="0" name="valor">

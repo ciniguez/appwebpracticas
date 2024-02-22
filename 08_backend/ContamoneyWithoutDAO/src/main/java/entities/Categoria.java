@@ -5,10 +5,13 @@ import java.util.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.persistence.Table;
 
 /**
@@ -120,8 +123,13 @@ public class Categoria implements Serializable {
      */
     @SuppressWarnings("unchecked")
 	public static List<Categoria> getAllOfIngresoType() {
-        return null;
-        
+    	EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
+    	String consultaJPQL = "SELECT t FROM Categoria t WHERE t.tipo= :mitipo";
+    	Query query =  em.createQuery(consultaJPQL);
+    	query.setParameter("mitipo", TipoMovimiento.INGRESO);
+    	
+    	return (List<Categoria>)query.getResultList();
+    	
     }
 
     /**
