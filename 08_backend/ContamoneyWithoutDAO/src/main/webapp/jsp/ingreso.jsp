@@ -16,7 +16,22 @@
 
 <body>
     <!-- nav -->
-    <%@include file='../templates/encabezado.html'%>
+     <header class="header_pagina_principal">
+        <button class="boton boton2 usuario_shortcut">
+            <img src="https://picsum.photos/30" alt="imagen de usuario">
+            <p>Usuario</p>
+        </button>
+        <div>
+            <a href="">
+                <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                <span>Dashboard</span>
+            </a>
+            <a href="">
+                <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                <span>Configuración</span>
+            </a>
+        </div>
+    </header>
     
     <main class="main_pagina_principal">
         <div class="contenedor_default dash_head">

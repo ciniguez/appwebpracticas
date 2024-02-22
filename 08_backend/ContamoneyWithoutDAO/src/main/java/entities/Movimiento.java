@@ -131,11 +131,7 @@ public class Movimiento implements Serializable {
 	 * @return
 	 */
 	public static void createIngreso(Movimiento ingreso) {
-		EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
-
-		em.getTransaction().begin();
-		em.persist(ingreso);
-		em.getTransaction().commit();
+		
 
 	}
 
@@ -179,12 +175,7 @@ public class Movimiento implements Serializable {
 
 	@SuppressWarnings("unchecked")
 	public List<Movimiento> getAllByCuenta(int idCuenta) {
-		EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
-
-		String JPQL = "SELECT m FROm Movimiento m WHERE m.destino.id= : idCuenta OR m.origen.id= :idCuenta ";
-		Query query = em.createQuery(JPQL);
-		query.setParameter("idCuenta", idCuenta);
-		return (List<Movimiento>) query.getResultList();
+		return null;
 	}
 
 	@Override

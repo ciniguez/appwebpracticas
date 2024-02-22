@@ -5,13 +5,10 @@ import java.util.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.persistence.Table;
 
 /**
@@ -89,8 +86,7 @@ public class Categoria implements Serializable {
      * @return
      */
     public static Categoria getById(int idCategoria) {
-    	EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
-        return em.find(Categoria.class, idCategoria);
+    	return null;
     }
 
     /**
@@ -124,10 +120,7 @@ public class Categoria implements Serializable {
      */
     @SuppressWarnings("unchecked")
 	public static List<Categoria> getAllOfIngresoType() {
-        EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
-        Query query = em.createQuery("SELECT c FROm Categoria c WHERE c.tipo = :tipo");
-        query.setParameter("tipo", TipoMovimiento.INGRESO);
-        return (List<Categoria>)query.getResultList();
+        return null;
         
     }
 

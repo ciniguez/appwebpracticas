@@ -87,8 +87,7 @@ public class Cuenta implements Serializable {
      * @return
      */
     public static Cuenta getById(int idCuenta) {
-    	EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
-        return em.find(Cuenta.class, idCuenta);
+    	return null;
     }
 
     /**
@@ -96,9 +95,7 @@ public class Cuenta implements Serializable {
      */
     @SuppressWarnings("unchecked")
 	public static List<Cuenta> getAll() {
-    	EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
-        Query consulta =  em.createQuery("SELECT a FROM Cuenta a");
-        return (List<Cuenta>) consulta.getResultList();
+    	return null;
     }
 
     /**
@@ -106,9 +103,8 @@ public class Cuenta implements Serializable {
      */
     @SuppressWarnings("unchecked")
 	public static List<Cuenta> getSumarized() {
-    	EntityManager em = Persistence.createEntityManagerFactory("persistencia").createEntityManager();
-        Query consulta =  em.createQuery("SELECT a FROM Cuenta a");
-        return (List<Cuenta>) consulta.getResultList();    }
+    	return null; 
+    	}
 
     /**
      * @param cuenta 

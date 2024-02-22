@@ -16,7 +16,22 @@
 <body>
     <!-- nav -->
    
-   <%@include file='../templates/encabezado.html'%>
+   <header class="header_pagina_principal">
+        <button class="boton boton2 usuario_shortcut">
+            <img src="https://picsum.photos/30" alt="imagen de usuario">
+            <p>Usuario</p>
+        </button>
+        <div>
+            <a href="">
+                <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                <span>Dashboard</span>
+            </a>
+            <a href="">
+                <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                <span>Configuración</span>
+            </a>
+        </div>
+    </header>
    
     <!-- dashboard de cartera digital -->
     <main class="main_pagina_principal">
@@ -47,31 +62,31 @@
 
                 <main class="cuentas">
 
-					<c:forEach items="${cuentas}" var="cuenta">
+					
 						<div class="card-cuenta">
 							<div>
 								<div class=" cuenta_icono">
 									<iconify-icon class="icono" icon="mdi:bank" width="32"></iconify-icon>
 								</div>
-								<h4>${cuenta.nombre}</h4>
-								<p>${cuenta.total}</p>
+								<h4>Banco</h4>
+								<p>1000</p>
 							</div>
 							<div class="botones_transacciones">
 
-								<a href="RegistrarMovimientosController?ruta=nuevoingreso&idCuenta=${cuenta.id}"> <iconify-icon
+								<a href=""> <iconify-icon
 										icon="ph:arrow-down-bold" width="18"></iconify-icon> <span
 									class="texto_boton">Depositar</span>
-								</a> <a href="RegistrarMovimientosController?ruta=nuevogasto&idCuenta=${cuenta.id}"> <iconify-icon
+								</a> <a href=""> <iconify-icon
 										icon="ph:arrow-up-bold" width="18"></iconify-icon> <span
 									class="texto_boton">Retirar</span>
-								</a> <a href="RegistrarMovimientosController?ruta=nuevotransferencia&idCuenta=${cuenta.id}"> <iconify-icon
+								</a> <a href=""> <iconify-icon
 										icon="mingcute:transfer-fill" width="18"></iconify-icon> <span
 									class="texto_boton">Transferir</span>
 								</a>
 
 							</div>
 						</div>
-					</c:forEach>
+					
 
 				</main>
 

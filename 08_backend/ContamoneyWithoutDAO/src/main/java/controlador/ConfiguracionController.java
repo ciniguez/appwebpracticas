@@ -19,20 +19,14 @@ public class ConfiguracionController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ruteador(request, response);
 	}
 
 	@Override
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ruteador(request, response);
 	}
 
-	private void ruteador(HttpServletRequest request, HttpServletResponse response) {
-		String ruta = request.getParameter("ruta");
 	
-		
-	}
 
 	
 
