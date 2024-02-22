@@ -24,19 +24,7 @@ public class Cuenta implements Serializable {
     
 
 
-	/**
-     * Default constructor
-     */
-    public Cuenta() {
-    	
-    }
-
-    
-    public Cuenta(String nombre, double total) {
-		super();
-		this.nombre = nombre;
-		this.total = total;
-	}
+	
 
 
 	@Id
@@ -49,6 +37,24 @@ public class Cuenta implements Serializable {
 
 	@Column(name="total")
     private double total;
+	
+	 /**
+     * Default constructor
+     */
+    public Cuenta() {
+    	
+    }
+
+    /**
+     * Constructor con parámetros
+     */
+    public Cuenta(String nombre, double total) {
+		super();
+		this.nombre = nombre;
+		this.total = total;
+	}
+
+    /** Getters y Setters **/
 
     
     public Integer getId() {
@@ -130,5 +136,5 @@ public class Cuenta implements Serializable {
     public void ajustarSaldo(double valor) {
         // TODO implement here
     }
-
+   
 }
