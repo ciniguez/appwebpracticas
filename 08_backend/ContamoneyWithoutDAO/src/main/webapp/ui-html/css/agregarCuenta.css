@@ -1,0 +1,123 @@
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header-principal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.btn-regresar {
+  background: var(--color-boton-2);
+  border: none;
+  margin: 0 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-boton);
+  transform: var(--transform-boton);
+}
+
+.btn-regresar:active {
+  transform: var(--transform-boton-active);
+}
+
+.icono-boton {
+  color: var(--color-texto);
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: perspective(400px) translateZ(0);
+}
+
+.contenedor-agregar-cuenta,
+.contenedor-agregar-categoria {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-boton-2);
+  max-width: 100%;
+  width: 700px;
+  height: 100%;
+  margin: 0.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
+  0 1px 2px rgba(0,0,0,0.24);
+}
+
+.titulo {
+  font-weight: bold;
+}
+
+.form-agregar-cuenta,
+.form-agregar-categoria {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.form-agregar-cuenta label,
+.form-agregar-categoria label {
+  font-weight: 400;
+}
+
+.txt-nombre-banco,
+.select-categoria,
+.txt-nombre-categoria {
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  margin: 10px 0;
+}
+
+.btn-agregar-cuenta,
+.btn-agregar-categoria {
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  margin: 10px 0;
+  background: var(--color-boton-1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: perspective(400px) translateZ(0);
+  font-weight: bold;
+}
+
+.btn-agregar-cuenta:active,
+.btn-agregar-categoria:active {
+  transform: perspective(400px) translateY(6px) translateZ(0) scale(0.9);
+}
+
+.btn-agregar-cuenta:hover,
+.btn-agregar-categoria:hover {
+  background: #cc9b00;
+}
+
+
+.contenedor-iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icono { 
+  margin: 10px;
+  padding: 10px;
+}
+
+.icono:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: .5rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transform: scale(1.10);
+}

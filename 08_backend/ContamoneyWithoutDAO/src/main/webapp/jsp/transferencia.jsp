@@ -1,0 +1,111 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleTransferencia.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <header class="header_pagina_principal">
+        <button class="boton boton2 usuario_shortcut">
+            <img src="https://picsum.photos/30" alt="imagen de usuario">
+            <p>Usuario</p>
+        </button>
+        <div>
+            <a href="dashboard.html">
+                <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                <span>Dashboard</span>
+            </a>
+            <a href="configuracion.html">
+                <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                <span>ConfiguraciÃ³n</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="cuerpo_transferencias">
+        <main class="main_pagina_principal">
+            <div class="contenedor_default dash_head " style="margin-bottom: 0px">
+                <header class="header_contenedor">
+                    <h3>Efectivo</h3>
+                    <button class="boton boton2 color_inactivo_boton">
+                        <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                    </button>
+                </header>
+                <main class="balance">
+                    <iconify-icon class="icono" icon="cryptocurrency:usd" style="color: white;"
+                        width="32"></iconify-icon>
+                    <h1>3000.00</h1>
+                </main>
+            </div>
+
+            <div class="flechas">
+                <iconify-icon class="icono" icon="carbon:arrow-right" width="32"></iconify-icon>
+                <iconify-icon class="icono" icon="carbon:arrow-left" width="32"></iconify-icon>
+            </div>
+
+            <div class="flechas-resposive">
+                <iconify-icon class="icono" icon="carbon:arrow-up" width="32"></iconify-icon>
+                <iconify-icon class="icono" icon="carbon:arrow-down" width="32"></iconify-icon>
+            </div>
+
+            <div class="contenedor_default dash_head" style="margin-bottom: 0px">
+                <header class="header_contenedor">
+                    <h3>Tarjeta</h3>
+                    <div class="botones_remitente">
+                        <button class="boton boton2 color_inactivo_boton">
+                            <iconify-icon class="icono" icon="carbon:view-filled" width="18"></iconify-icon>
+                        </button>
+                        <select name="tipo" id="tipo" class="select-banco-boton">
+                            <option value="0"></option>
+                            <option value="1">Banco</option>
+                            <option value="2">Efectivo</option>
+                            <option value="3">Tarjeta</option>
+                        </select>
+                    </div>
+                </header>
+                <main class="balance">
+                    <iconify-icon class="icono" icon="cryptocurrency:usd" style="color: white;"
+                        width="32"></iconify-icon>
+                    <h1>1000.00</h1>
+                </main>
+            </div>
+
+        </main>
+
+        <div class="contenedor-transferencia">
+            <p class="titulo">Datos Transferencia</p>
+            <form class="form-agregar-cuenta" action="dashboard.html">
+                <label for="nombre">Ingresa el monto a transferir </label>
+                <input type="text" name="nombre" class="txt-nombre-banco" placeholder="Nombre de Cuenta">
+                <label for="concepto">Ingresa el motivo de transferencia </label>
+                <input type="text" name="concepto" class="txt-nombre-banco" placeholder="Motivo de transferencia">
+                <label for="tipo">Selecciona categoria de la Cuenta</label>
+                <select name="tipo" id="tipo" class="select-categoria">
+                    <option value="0">Seleccione una categoria</option>
+                    <option value="1">Comida</option>
+                    <option value="2">Transferencia</option>
+                    <option value="3">NÃ³mina</option>
+                    <option value="4">Universidad</option>
+                </select>
+                
+                <div class="btn-confirmacion">
+                    <button class="boton boton1">Transferir</button>
+                    <button class="boton boton-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

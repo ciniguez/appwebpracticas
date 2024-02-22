@@ -1,0 +1,202 @@
+.header_pagina_principal {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 1fr;
+    background-color: var(--color-bg);
+    color: var(--color-texto);
+    padding: 1rem;
+}
+
+.header_pagina_principal .contenedor_derecha {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.header_pagina_principal .cuenta_seleccionada {
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-boton-2);
+    color: var(--color-texto);
+}
+
+.seleccionar_cuenta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.main_pagina_principal {
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenedor-resumen-important {
+    width: 100%;
+    max-width: 643px !important;
+}
+
+.contenedor_default {
+    background-color: var(--color-boton-2);
+    border-radius: 30px;
+    padding: 1rem 1.2rem;
+    margin: 0 0 1rem 0;
+    width: 100%;
+}
+
+.header_contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaccion {
+    display: grid;
+    /*grid de 5 columnas*/
+    grid-template-columns: 0.25fr 0.5fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    /*alinear horizontalmente en el centro cada grid*/
+    justify-items: center;
+    background-color: var(--color-boton-2);
+    border-radius: 30px;
+    margin: 2rem 0 0 0;
+}
+
+.resumen-por-categoria {
+    background: var(--color-boton-2);
+    border-radius: 30px;
+    height: auto;
+    padding: 1rem;
+    width: auto;
+}
+
+.transaccion-categoria {
+    grid-template-columns: 0.25fr 0.5fr 1fr 1fr 2fr 1fr 1fr;
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+
+.transaccion-categoria-responsive {
+    display: none;
+    padding: 0.5rem;
+}
+
+
+.transaccion-categoria-responsive>* {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.transaccion-categoria-responsive .boton {
+    width: fit-content;
+    display: flex;
+}
+
+.linea-separadora {
+    border: 1px solid var(--color-boton-1);
+}
+
+.suma-categoria {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+
+@media (max-width: 430px) {
+    .transaccion {
+        display: none;
+    }
+
+    .botones_transacciones .boton,
+    .boton_transacciones .boton {
+        width: fit-content;
+    }
+
+    .botones_transacciones .texto_boton,
+    .boton_transacciones .texto_boton {
+        display: none;
+    }
+
+    .botones_transacciones .boton .icono,
+    .transaccion_icono,
+    .boton_transacciones .boton .icono {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .transaccion_responsive,
+    .transaccion-categoria_responsive {
+        display: block;
+    }
+
+}
+
+@media (max-width: 489px) {
+    .cuentas .boton {
+        flex-direction: column;
+    }
+
+    .clasificacion .boton {
+        flex-direction: column;
+    }
+}
+
+
+@media (min-width: 700px) {
+
+    .contenedor-resumen {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+
+
+}
+
+@media (max-width: 660px) {
+    .transaccion-categoria-responsive {
+        display: block;
+    }
+
+    .transaccion-categoria {
+        display: none;
+    }
+}
+
+@media (max-width: 775px) {
+    .header_pagina_principal {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .seleccionar_cuenta {
+        justify-content: flex-end;
+    }
+
+    .header_pagina_principal .boton p {
+        display: none;
+    }
+
+    .header_pagina_principal .boton img {
+        margin: 0;
+    }
+
+    .main_pagina_principal {
+        align-items: center;
+    }
+
+    .contenedor_default .grid_abajo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
