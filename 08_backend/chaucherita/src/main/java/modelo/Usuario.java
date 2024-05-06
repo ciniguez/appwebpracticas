@@ -1,6 +1,4 @@
-package entity;
-
-import java.util.*;
+package modelo;
 
 /**
  * @author Carlos Iñiguez

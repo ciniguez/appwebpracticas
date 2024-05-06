@@ -1,4 +1,4 @@
-package entity;
+package modelo;
 
 import java.util.*;
 
@@ -13,29 +13,6 @@ public class Ingreso extends Movimiento {
     public Ingreso() {
     }
 
-    /**
-     * 
-     */
-    public void monto;
-
-    /**
-     * 
-     */
-    public void fecha;
-
-    /**
-     * 
-     */
-    public void concepto;
-
-    /**
-     * 
-     */
-    public void categoria;
-
-    /**
-     * 
-     */
-    public void cuenta;
+    
 
 }

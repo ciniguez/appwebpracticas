@@ -1,4 +1,4 @@
-package control;
+package controladores;
 
 import java.util.*;
 
