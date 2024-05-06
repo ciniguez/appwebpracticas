@@ -1,0 +1,67 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link type="text/css" rel="stylesheet" href="css/agregarCuenta.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body>
+  <header class="header-principal">
+      <button class="btn-regresar" onclick="(window.location ='index.html')">
+        <iconify-icon class="icono-boton" icon="mdi:arrow-left" width="20"></iconify-icon>
+      </button>
+      <button class="boton boton2 usuario_shortcut">
+        <img src="https://picsum.photos/30" alt="imagen de usuario">
+        <p>Usuario</p>
+      </button>
+  </header>
+  <main>
+    <div class="contenedor-agregar-cuenta">
+      <p class="titulo">Agregar Cuenta</p>
+      <form class="form-agregar-cuenta">
+        <label for="nombre">Nombre de Cuenta</label>
+        <input type="text" name="nombre" class="txt-nombre-banco" placeholder="Nombre de Cuenta">
+        <label for="tipo">Selecciona una Icono para tu Cuenta</label>
+        <div class="contenedor-iconos">
+          <iconify-icon class="icono" icon="mdi:bank" width="32"></iconify-icon>
+          <iconify-icon class="icono" icon="mdi:wallet" width="32"></iconify-icon>
+          <iconify-icon class="icono" icon="mdi:credit-card" width="32"></iconify-icon>
+        </div>
+        <label for="tipo">Categoria de la Cuenta</label>
+        <select name="tipo" id="tipo" class="select-categoria">
+          <option value="0">Seleccione una categoria</option>
+          <option value="1">Comida</option>
+          <option value="2">Transferencia</option>
+          <option value="3">NÃ³mina</option>
+          <option value="4">Universidad</option>
+        </select>
+        <button type="button" class="btn-agregar-cuenta">Agregar Cuenta</button>
+      </form>
+    </div>
+    <div class="contenedor-agregar-categoria">
+      <p class="titulo">Agregar Categoria</p>
+      <form class="form-agregar-categoria">
+        <label for="nombre">Nombre de Categoria</label>
+        <input type="text" name="nombre" class="txt-nombre-categoria" placeholder="Nombre de Categoria">
+        <label for="tipo">Selecciona una Icono para tu categoria</label>
+        <div class="contenedor-iconos">
+          <iconify-icon class="icono" id="icono1" icon="mdi:food" width="32"></iconify-icon>
+          <iconify-icon class="icono" id="icono1" icon="mdi:transfer" width="32"></iconify-icon>
+          <iconify-icon class="icono" id="icono1" icon="mdi:briefcase" width="32"></iconify-icon>
+          <iconify-icon class="icono" id="icono1" icon="mdi:school" width="32"></iconify-icon>
+        </div>
+        <button type="button" class="btn-agregar-categoria">Agregar Categoria</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

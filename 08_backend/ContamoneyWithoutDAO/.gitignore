@@ -1,0 +1,10 @@
+/build/
+/target/
+/build/
+.project
+.metadata
+tmp/
+local.properties
+.settings/
+.loadpath
+*.launch
