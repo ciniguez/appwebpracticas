@@ -1,0 +1,17 @@
+/* Metodos de referenciar*/
+/*POR CLAVE (nombre de la etiqueta)*/
+p {
+    color: #0000FF
+}
+
+/* Por ID*/
+#kevin {
+    color: #FF0000;
+}
+
+/* Por atributo Clase*/
+.nena {
+    font-size: 20px;
+}
+
+*{ font-family: Verdana, Geneva, Tahoma, sans-serif;}
