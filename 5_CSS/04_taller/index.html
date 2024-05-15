@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Comics</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        *{}
+
+        nav ul{ 
+            list-style-type: none;
+            text-align: center;
+            border: 0px;
+            margin: 0px;
+            background-color: hsl(240, 100%,50%);
+            color: #FFFFFF;
+        }
+        nav ul li{
+            display: inline-block;
+        }
+        .card{
+            width:300px;
+            min-height: 200px;
+            border: 1px dotted #444;
+            padding: 0px 15px;
+            background: #aaa;
+            border-radius: 15px;
+        }
+        main{ display: flex; justify-content:space-around;}
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <form>
+                Usuario: <input type="text">
+                Password: <input type="text">
+                <input type="submit">
+            </form>
+
+        </div>
+        <nav>
+            <ul>
+                <li>Inicio</li>
+                <li>Acerca de</li>
+                <li>Novedadaes</li>
+                <li>Catalogo</li>
+            </ul>
+        </nav>
+        <main>
+            <div class="card">
+                <img src="asdfasdffs.jpg">
+                <h1>Superman</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate porro ea qui </p>
+                <p>$40</p>
+                <div><button>Comprar</button></div>
+            </div>
+            <div>2</div>
+            <div>3</div>
+        </main>
+    </div>
+</body>
+</html>
