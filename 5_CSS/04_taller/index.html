@@ -1,66 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de Comics</title>
     <style>
-        body{
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        *{}
 
-        nav ul{ 
+
+        nav ul {
             list-style-type: none;
             text-align: center;
             border: 0px;
             margin: 0px;
-            background-color: hsl(240, 100%,50%);
+            background-color: hsl(240, 100%, 50%);
             color: #FFFFFF;
         }
-        nav ul li{
+
+        nav ul li {
             display: inline-block;
         }
-        .card{
-            width:300px;
-            min-height: 200px;
+
+        .card {
+            background: #FFF;
+            border-radius: 0px 0px 15px 15px;
             border: 1px dotted #444;
-            padding: 0px 15px;
-            background: #aaa;
-            border-radius: 15px;
+            min-height: 200px;
+            padding: 0px 0px 15px 0px;
+            text-align: center;
+            width: 250px;
         }
-        main{ display: flex; justify-content:space-around;}
+
+        .card .imagen-superheroe {
+            width: 250px;
+            height: 250px;
+        }
+
+        .card .imagen-superheroe img {
+            height: 100%;
+        }
+
+        .precio-anterior {
+            color: #FF0000;
+            font-size: 0.7em;
+            text-decoration: line-through;
+        }
+
+        .add-button {
+            background: #138aaa;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin: 0 10px;
+        }
+
+        .add-button a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .recomedados {
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            padding: 0px 0px;
+        }
+
+        nav ul li {
+            padding: 15px 0px;
+        }
+
+        nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #FFFF00
+        }
+
+        nav ul li:hover {
+            background: hsl(240, 100%, 75%);
+        }
+        #encabezado{ display: flex; justify-content: space-between;}
+        .logo img { height: 100px;}
+        .logo{display: flex; align-items: center;}
     </style>
 </head>
+
 <body>
     <div>
-        <div>
-            <form>
-                Usuario: <input type="text">
-                Password: <input type="text">
-                <input type="submit">
-            </form>
-
+        <div id="encabezado">
+            <div class="logo">
+                <img src="imagenes/Wow.png" alt="">
+                <p>Mi tienda de comics</p>
+            </div>
+            <div class="login">
+                <form>
+                    Usuario: <input type="text">
+                    Password: <input type="text">
+                    <input type="submit">
+                </form>
+            </div>
         </div>
+
         <nav>
             <ul>
-                <li>Inicio</li>
-                <li>Acerca de</li>
-                <li>Novedadaes</li>
-                <li>Catalogo</li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Acerca de</a></li>
+                <li><a href="">Novedadaes</a></li>
             </ul>
         </nav>
         <main>
-            <div class="card">
-                <img src="asdfasdffs.jpg">
-                <h1>Superman</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate porro ea qui </p>
-                <p>$40</p>
-                <div><button>Comprar</button></div>
+            <h1 class="recomedados">Recomendados </h1>
+            <div class="card-container">
+                <div class="card">
+                    <div class="imagen-superheroe">
+                        <img src="imagenes/batman.jpg" alt="Batman Forever">
+                    </div>
+                    <h1>Batman</h1>
+                    <div>Disponible</div>
+                    <p class="precio-anterior">$45</p>
+                    <p>$30</p>
+                    <div class="add-button">
+                        <a href="#ejemplo.html">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imagen-superheroe">
+                        <img src="imagenes/blackPanther.jpeg" alt="Batman Forever">
+                    </div>
+                    <h1>Black Panter</h1>
+                    <div>Disponible</div>
+                    <p class="precio-anterior">$45</p>
+                    <p>$30</p>
+                    <div class="add-button">
+                        <a href="#ejemplo.html">Add to Cart</a>
+                    </div>
+                </div>
+                <div>3</div>
             </div>
-            <div>2</div>
-            <div>3</div>
+
         </main>
     </div>
 </body>
+
 </html>

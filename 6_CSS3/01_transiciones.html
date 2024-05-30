@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones</title>
+    <style>
+        body{ font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        #efectos div{
+            background: #00FF00;
+            width:150px;
+            height: 150px;
+            color: white;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Transición*/
+            /*
+            transition-delay: 2s;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+            transition-property: width;
+            */
+            /* Shorthand*/
+
+            transition: width 1s linear 1s;
+        }
+
+        #efectos div:hover{
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transiciones con CSS 3</h1>
+    <div id="efectos">
+        <div>linear</div>
+        <div>ease</div>
+        <div>ease-in</div>
+        <div>ease-out</div>
+        <div>ease-in-out</div>
+    </div>
+</body>
+</html>
