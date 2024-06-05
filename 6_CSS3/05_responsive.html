@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        body{ margin: 0 auto; text-align: center; box-sizing: border-box;}
+        #encabezado{ background: blue; width: 100%;}
+        footer{ background: green;}
+        main div{background: red; width:49%; display: inline-block;}
+
+        @media screen and (max-width: 700px){
+            main div{background: #d4d4d4; width:100%}
+        } 
+    </style>
+</head>
+<body>
+    <div id="encabezado">Encabezado</div>
+    <main>
+        <div class="col-1">zona 1</div>
+        <div class="col-2">zona 2</div>
+    </main>
+    <footer>
+        Pie de pagina
+    </footer>
+</body>
+</html>
