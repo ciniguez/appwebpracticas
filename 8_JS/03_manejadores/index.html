@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejadores</title>
+   
+</head>
+<body>
+    <h1>Forma 1: Manejadores en Línea</h1>
+    <p onclick="alert('Manejador en linea')">Hacer Click!</p>
+    
+    <h1>Forma 2: Manejadores como propiedades</h1>
+    <p>Hacer Clic (forma 2)</p>
+
+    <h1>Forma 3: Manejadores con addEventListener()</h1>
+    <p>Hacer Clic! (Forma3)</p>
+
+    <script>
+        function mostrarMensaje(){ 
+            alert("Se hizo click")
+        }
+        function mostrarMensajeDelElementoHTML( elemento ){
+            alert(elemento.textContent);
+        }
+
+        var elemento1 = document.getElementsByTagName("p")[1];
+        elemento1.onclick = mostrarMensaje;
+
+        var elemento2 = document.getElementsByTagName("p")[2];
+        elemento2.addEventListener('click', mostrarMensaje);
+
+        /*** Mostrar el contenido de lo seleccionado ******/
+        var elemento3 =document.getElementsByTagName("p")[1];
+        elemento3.onclick= function(){
+            mostrarMensajeDelElementoHTML (this);
+        }
+this
+
+    </script>
+</body>
+</html>
