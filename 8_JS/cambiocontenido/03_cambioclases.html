@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mostrar{ display: block}
+        .ocultar{ display: none}
+        .cajaroja{ border: 1px solid red;}
+    </style>
+</head>
+<body>
+    <div>DIV1</div>
+    <div id="div_ejemplo" class="mostrar">DIV2</div>
+
+    <button onclick="mostrar();">Mostrar</button>
+    <button onclick="ocultar();">Ocultar</button>
+    <button onclick="agregar();">Agregar Clase</button>
+    <button onclick="eliminar();">Eliminar Clase</button>
+
+    <script>
+        function mostrar(){
+            let elemento = document.getElementById("div_ejemplo");
+            elemento.classList.replace('ocultar', 'mostrar');
+        }
+        function ocultar(){
+            let elemento = document.getElementById("div_ejemplo");
+            elemento.classList.replace('mostrar', 'ocultar');
+        }
+        function agregar(){
+            let elemento = document.getElementById("div_ejemplo");
+            elemento.classList.add('cajaroja');
+        }
+        function eliminar(){
+            let elemento = document.getElementById("div_ejemplo");
+            if (elemento.classList.contains('cajaroja'))
+                elemento.classList.remove('cajaroja');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ejemplo{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="ejemplo">DIV NORMAL</div>
+    <div class="ejemplo">DIV MODIFICADO</div>
+
+    <script>
+        //Objetivo: Queremos cambiar el border de NEGRO a ROJO
+
+        let element = document.getElementsByTagName("div")[1];
+        /***** FORMA 1****/
+        /*
+        element.setAttribute("style", "height:100px; width:100px; border:2px solid red;");
+        */
+
+        /** FORMA 2**/
+        element.style.borderRadius = '50%';
+        element.style.display='flex';
+        element.style.justifyContent = 'center';
+        element.style.border= "2px solid red";
+    </script>
+</body>
+</html>
