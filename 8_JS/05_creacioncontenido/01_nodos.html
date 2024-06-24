@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body><p>Texto en parrafo</p><div>
+        <p>Parrafo 1</p>
+        <!-- comentarios -->
+    </div>
+    <p>Parrafo 2 con span <span class="importante">y clase importante</span></p>
+    <script>
+        function recursividad(nodo) {
+            var arrayNodos = nodo.childNodes;
+
+            arrayNodos.forEach(element => {
+                console.log("===================");
+                console.log("Nodo: " + element.nodeName + " es de tipo :" + element.nodeType 
+                + " con valor: " + element.nodeValue);
+                console.log("Nodo padre: " + element.parentNode);
+
+                if (element.hasChildNodes) {
+                    recursividad( element );
+                }
+            });
+
+
+        }
+        recursividad(document.body);
+    </script>
+</body>
+
+</html>
