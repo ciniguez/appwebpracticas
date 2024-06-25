@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <img id="img" src=""/>
+    </div>
+    <button onclick="cargarFichero();">Cambiar contenido</button>
+
+    <script>
+        function cargarFichero(){
+            //1.- Instanciar el Objeto XMLHttpRequest
+            var xhttpr = new XMLHttpRequest();
+            //2.- Configurar la solicitud
+            xhttpr.open( "GET", "https://api.giphy.com/v1/gifs/random?api_key=x9y2WSJ0J1XuNPh08po7tA51kAHJ5Bmw&tag=&rating=g", true);
+            xhttpr.responseType ="json";
+            //3.- Asignar la funci{on que respondera al evento cuando lleguen los datos
+            xhttpr.onreadystatechange = function(){
+                if ( this.readyState == 4 && this.status == 200){
+                    console.log( this.response);
+
+                    document.getElementById("img").setAttribute("src", this.response.data.images.original.url);
+                }
+            }
+            //4.- Enviamos la solicitud (Ejecutar)
+            xhttpr.send();
+        }
+    </script>
+</body>
+</html>

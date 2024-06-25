@@ -1,0 +1,8 @@
+{
+    "list":[
+        {"nombre":"Alplicaciones Web", "docente": "Carlos Iñiguez"},
+        {"nombre":"Calidad de Software", "docente":"Prof. Mosquera"},
+        {"nombre":"Metodolo. Agil", "docente":"Prof. Sandobalin"},
+        {"nombre":"Construcción", "docente":"Prof. Mosquera"}
+    ]
+}
