@@ -1,0 +1,18 @@
+h1, h2{
+    font-size: 21px;
+    color: #FF00FF;
+
+}
+.cuadrado{
+    background: #000000;
+    color: #FFFF00;
+    width: 150px;
+    height: 150px;
+    font-size: 56px;
+    text-align: center;
+    border:3px solid #FFFF00;
+    margin-bottom:8px;
+    padding-top: 15px;
+    box-sizing: border-box;
+
+}
