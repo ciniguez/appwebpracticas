@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="datos"></div>
+
+    <button onclick="cargarFicheroDelServer();">Cambiar Contenido</button>
+
+    <script>
+        function cargarFicheroDelServer(){
+            //Aplico AJAX
+
+            //1.- Instanciar el objeto
+            var xhttp = new XMLHttpRequest();
+            //2.- Configuro la solicitud
+            xhttp.open("GET","ficheroJSON.json", true);
+            xhttp.responseType = "json";
+            //3.- Asignar la función que respondeá al evento, cuando llegan los datos
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                   console.log(this.response);
+
+                   var elementoUL = document.createElement("ul");
+
+                   this.response.list.forEach(element=>{
+                    var elementoLI = document.createElement("li");
+                    var texto = document.createTextNode(element.item);
+                    elementoLI.appendChild(texto);
+                    elementoUL.appendChild(elementoLI);
+                   });
+
+                   document.getElementById("datos").appendChild(elementoUL);
+
+                }
+            }
+            //4.- Enviar la solicitud (asíncrona)
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Selectores en JS</h1>
+    <p id="mielemento">Parrafo con id="mielemento"</p>
+
+    <span class="clase">SPAN</span>
+
+    <p class="clase">Parrafo con clase</p>
+
+    <h2>DIV con tres parrafor</h2>
+    <div id="principal">
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p>Parrafo 3</p>
+    </div>
+    
+    <script>
+        //**** SELETORES **** //
+        //Obtener Elemento por su id (mielemento)
+        var elemento = window.document.getElementById("mielemento");
+        console.log(elemento.textContent);
+
+        //Obtener TODOS los elementos con la etiqueta p
+        var elementos = document.getElementsByTagName("p");
+        console.log("Elementos P:" + elementos.length);
+        for(var i= 0; i< elementos.length; i++){
+            console.log("["+ i +"]:" + elementos[i].textContent);
+        }
+
+        //Obtener Elemnetos con la clase "clase"
+        var elementosClase = document.getElementsByClassName("clase");
+        console.log("Elementos con la .clase:" + elementosClase.length);
+        for(var i= 0; i< elementosClase.length; i++){
+            console.log("["+ i +"]:" + elementosClase[i].textContent);
+        }
+
+        //***** Uso de QuerySelector *****/
+        console.log("=====Query Selector ===========")
+        var elementpP = document.querySelector("#principal p");
+        console.log(elementoP.textContent);
+        console.log("========================")
+        console.log("=====Query Selector All ===========")
+        var elementosP = document.querySelectorAll("#principal p");
+        console.log("Numero de elementos encontrados:"+ elementosP.length);
+        for(var i= 0; i< elementosP.length; i++){
+            console.log("["+ i +"]:" + elementosP[i].textContent);
+        }
+        console.log("========================")
+    </script>
+</body>
+</html>

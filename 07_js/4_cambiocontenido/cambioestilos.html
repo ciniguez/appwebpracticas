@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clase { height: 100px; width: 100px; border: 2px solid black}
+    </style>
+</head>
+<body>
+    <div class="clase">DIV normal</div>
+    <div class="clase">DIV modificado</div>
+
+    <script>
+        var elementoDiv = document.querySelector("div:nth-child(2)");
+        /*
+        //FORMA 1
+        elementoDiv.setAttribute('style','border:2px solid red');
+        */
+       //FORMA 2
+       elementoDiv.style.borderRadius = '50%';
+
+    </script>
+
+</body>
+</html>

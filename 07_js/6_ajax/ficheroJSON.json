@@ -1,0 +1,10 @@
+{
+    "list":[
+        {"item": "Gestion de auditoria"},
+        {"item": "Gestion de menus"},
+        {"item": "Gestion de contratos"},
+        {"item": "Gestion de recursos Humanos"},
+        {"item": "Gestion de compras"},
+        {"item": "Gestion de mayorista"}
+    ]
+}
