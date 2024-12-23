@@ -9,7 +9,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import modelo.Usuario;
+import modelo.dao.UsuarioDAO;
+import modelo.entidades.Usuario;
 
 @WebServlet("/GestionarUsuariosController")
 public class GestionarUsuariosController extends HttpServlet {
@@ -63,7 +64,8 @@ public class GestionarUsuariosController extends HttpServlet {
 		// 2.- Hablo con el Dominio (OPCIONAL)
 		List<Usuario> usuarios;
 		try {
-			usuarios = Usuario.getUsuarios();
+			UsuarioDAO usuarioDAO = new UsuarioDAO();
+			usuarios = usuarioDAO.getUsuarios();
 
 			// 3.- HAblo con la Vista
 			request.setAttribute("usuarios", usuarios);

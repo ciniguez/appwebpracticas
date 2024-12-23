@@ -5,7 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import modelo.Usuario;
+import modelo.dao.UsuarioDAO;
+import modelo.entidades.Usuario;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -50,8 +51,9 @@ public class LoginController extends HttpServlet {
 
 		// 2.- Hablar con el modelo
 		Usuario u;
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		try {
-			u = Usuario.autenticarPersona(usuario, clave);
+			u = usuarioDAO.autenticarPersona(usuario, clave);
 			if (u != null) {
 				// Le premito ir al CU GestionarUsuarios (listar Usuarios)
 				// 3.- redireccionar a la Vista/Controlador
