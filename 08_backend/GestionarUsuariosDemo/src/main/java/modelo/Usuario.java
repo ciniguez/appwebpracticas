@@ -1,8 +1,13 @@
 package modelo;
 
 import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import modelo.bdd.BddConnection;
 
 public class Usuario implements Serializable{
 
@@ -12,7 +17,7 @@ public class Usuario implements Serializable{
 	private String clave;
 	private String username;
 	
-	private static List<Usuario> listaUsuarios = null; //BDD simulada
+	//private static List<Usuario> listaUsuarios = null; //BDD simulada
 	
 	public Usuario() {}
 	
@@ -59,8 +64,10 @@ public class Usuario implements Serializable{
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	/***** Métodos de Negocio *****/
-	public static List<Usuario> getUsuarios(){
+	/***** Métodos de Negocio 
+	 * @throws SQLException *****/
+	public static List<Usuario> getUsuarios() throws SQLException{
+		/*
 		if( listaUsuarios == null) {
 			listaUsuarios = new ArrayList<Usuario>();
 			listaUsuarios.add(new Usuario(1, "Carlos", "carlos123", "ciniguez"));
@@ -68,12 +75,39 @@ public class Usuario implements Serializable{
 			listaUsuarios.add(new Usuario(3, "Juan", "juan123", "jtorres"));
 		}
 		return listaUsuarios;
+		*/
+		
+		List<Usuario> usuarios = new ArrayList<Usuario>();
+		
+		String _SQL_GET_ALL = "SELECT * FROM usuario";
+		
+		PreparedStatement pstmt = BddConnection.getConexion().prepareStatement(_SQL_GET_ALL);
+		ResultSet rs = pstmt.executeQuery();
+		
+		//Iterar el ResultSet para leer los datos
+		while(rs.next()) {
+			Usuario u = new Usuario();
+			u.setClave(rs.getString("clave"));
+			u.setId(rs.getInt("id"));
+			u.setNombre(rs.getString("nombre"));
+			u.setUsername(rs.getString("username"));
+			
+			usuarios.add(u);
+		}
+		
+	
+		BddConnection.cerrar(rs);
+		BddConnection.cerrar(pstmt);
+		BddConnection.cerrar();
+		
+		return usuarios;
+		
 	}
 	
-	public static Usuario autenticarPersona( String usuario, String clave) {
+	public static Usuario autenticarPersona( String usuario, String clave) throws SQLException {
 		
 		for (Usuario usr : getUsuarios()) {
-			if(usr.getNombre().equals(usuario) && usr.getClave().equals(clave)) {
+			if(usr.getUsername().equals(usuario) && usr.getClave().equals(clave)) {
 				return usr;
 			}
 		}	

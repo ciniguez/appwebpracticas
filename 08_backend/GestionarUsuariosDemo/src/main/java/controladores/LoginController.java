@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import modelo.Usuario;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
@@ -46,20 +47,23 @@ public class LoginController extends HttpServlet {
 		// 1.- Obtener parametros
 		String usuario = request.getParameter("username");
 		String clave = request.getParameter("clave");
-		
+
 		// 2.- Hablar con el modelo
-		Usuario u = Usuario.autenticarPersona(usuario, clave);
-		if (u != null) {
-			// Le premito ir al CU GestionarUsuarios (listar Usuarios)
-			// 3.- redireccionar a la Vista/Controlador
-			response.sendRedirect("GestionarUsuariosController?ruta=listar");
-		}else {
-			// 3.- redireccionar a la Vista
-			response.sendRedirect("jsp/login.jsp");
-			
+		Usuario u;
+		try {
+			u = Usuario.autenticarPersona(usuario, clave);
+			if (u != null) {
+				// Le premito ir al CU GestionarUsuarios (listar Usuarios)
+				// 3.- redireccionar a la Vista/Controlador
+				response.sendRedirect("GestionarUsuariosController?ruta=listar");
+			} else {
+				// 3.- redireccionar a la Vista
+				response.sendRedirect("jsp/login.jsp");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-		
 	}
 
 	private void ingresar(HttpServletRequest request, HttpServletResponse response)

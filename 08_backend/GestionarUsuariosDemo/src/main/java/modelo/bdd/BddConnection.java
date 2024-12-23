@@ -6,16 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.cj.protocol.Resultset;
-
 public class BddConnection {
 	
 	private static Connection conn = null;
 	
 	private BddConnection() {
-		String servidor="";
-		String database="";
-		String usuario="";
+		String servidor="localhost:3306";
+		String database="gestionusuarios";
+		String usuario="root";
 		String password="";
 		String url = "jdbc:mysql://" + servidor + "/" + database;
 		
