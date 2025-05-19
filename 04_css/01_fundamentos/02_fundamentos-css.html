@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Ensayo HTML</title>
+        <style>
+            /* Aqui los CSS*/
+            h2{ color:red}
+            #txtNombre{background-color: yellow;}
+            .miclase{ 
+                /* Colores */
+                color:blueviolet; /*ltipografia*/
+                background: #FFFF00;
+                /* tipo de letra */
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .otraclase{color:red;}
+            .caja-sin{
+                background: #000000;
+                color:#FFFFFF;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                height: 150px;
+                text-align: center;
+                border-radius: 15px;
+                border: 2px solid #FF0000;
+
+                width: 200px;
+                height: 200px;
+                padding: 8px;
+                margin: 2px;
+            }
+             .caja-con{
+                background: #000000;
+                color:#FFFFFF;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                height: 150px;
+                text-align: center;
+                border-radius: 15px;
+                border: 2px solid #FF0000;
+
+                width: 200px;
+                height: 200px;
+                padding: 8px;
+                margin: 2px;
+                box-sizing: border-box;
+            }
+
+        </style>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <h1 style="color:rgb(255,0,255)">Este es un titular</h1>
+        <h2>Este es un segundo titulo</h2>
+        <h6>Titulo h6</h6>
+        <p>Este es un párrafo</p>
+        <a href="http://www.google.com" target="_blank">Ir a Google</a>
+        <ul>
+            <li class="miclase">item 1</li>
+            <li>item 2</li>
+        </ul>
+        <ol>
+            <li class="otraclase">item 1</li>
+            <li class="miclase">item 2</li>
+        </ol>
+
+        <div class="caja-sin">Caja sin</div>
+         <div class="caja-con">Caja con</div>
+        <table>
+            <thead>
+                <th>Código</th>
+                <th>Descripcion</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Esta es una descripcion</td>
+                    <td>
+                        <a href="http://">Edit</a> 
+                        <a href="http://">Delete</a> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--  Formularios -->
+        <form action="" method="">
+            <label for="txtNombre">Nombre:</label>
+            <input type="text" name="" id="txtNombre">
+            <input type="submit" value="Ingresar">
+        </form>
+    </body>
+</html>
