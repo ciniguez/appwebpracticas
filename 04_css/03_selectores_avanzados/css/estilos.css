@@ -1,0 +1,31 @@
+.boton{
+    padding: 13px 21px;
+    background: #FF0000;
+    color:#FFF;
+    border: 2px solid #D9D9D9;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    text-align: center;
+}
+.boton:hover{
+    background: hsl(360 100% 75%);
+    color: hsl(360 100% 50%);
+    cursor:pointer;
+}
+
+td{text-align: left; padding: 8px;}
+tr:nth-child(even){
+    background: hsl(360 100% 75%);
+}
+
+#cuento{
+    font-size: 1.8rem;
+}
+#cuento::first-letter{
+    font-size: 3rem;
+}
+
+div .seleccion{
+    color: red;
+}

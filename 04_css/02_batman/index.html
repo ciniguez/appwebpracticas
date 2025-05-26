@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+
+        .card {
+            border: 1px dashed #AAA;
+            background: #FFF;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            border-radius: 0px 0px 15px 15px;
+            width: 250px;
+        }
+
+        /* Imagen ajustada al tamaño de la caja padre*/
+        .imagen-superheroe {
+            width: 250px;
+            height: 250px;
+        }
+
+        .imagen-superheroe img {
+            width: auto;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .card h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        .card .disponible {
+            font-size: 10px;
+        }
+
+        .card .precio-anterior {
+            color: #FF0000;
+            text-decoration: line-through;
+        }
+
+        /* Boton */
+        .add-button {
+            background: #138daa;
+            border-radius: 4px;
+            padding: 4px 0px 4px 0px;
+            margin: 15px;
+        }
+
+        .add-button a {
+            text-decoration: none;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="imagen-superheroe">
+            <img src="imagenes/batman.jpg" alt="">
+        </div>
+
+        <!-- detalles del producto-->
+        <div>
+            <h1>Batman</h1>
+            <div class="disponible">Disponible</div>
+            <!-- precios -->
+            <div>
+                <div class="precio-anterior">$45</div>
+                <div>30</div>
+            </div>
+            <!-- boton -->
+            <div class="add-button">
+                <a href="http://www.google.com">Add to cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="imagen-superheroe">
+            <img src="imagenes/batman.jpg" alt="">
+        </div>
+
+        <!-- detalles del producto-->
+        <div>
+            <h1>Batman</h1>
+            <div class="disponible">Disponible</div>
+            <!-- precios -->
+            <div>
+                <div class="precio-anterior">$45</div>
+                <div>30</div>
+            </div>
+            <!-- boton -->
+            <div class="add-button">
+                <a href="http://www.google.com">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

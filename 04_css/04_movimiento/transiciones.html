@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        #efectos div{
+            background: green;
+            border: 1px solid #000;
+            color:#fff;
+            font-size: 0.8rem;
+            height: 50px;
+            width: 150px;
+            text-align: center;
+            padding-top: 15px;
+
+            transition-delay: 1s;
+            transition-duration: 3s;
+            transition-property: width;
+            transition-timing-function: linear;
+        }
+
+        #efectos div:hover{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="efectos">
+        <div>lineal</div>
+    </div>
+    
+</body>
+</html>
