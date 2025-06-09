@@ -1,0 +1,25 @@
+body{ 
+    /*
+    background: #FF00FF;
+    */
+}
+/*h1{ color: red;}*/
+.caja{
+    width: 150px;
+    height: 100px;
+    /*
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ff0;
+    text-align: center;
+    font-size: 1.5rem;
+    */
+}
+
+.b-primaria{ background: #FF00FF;}
+.b-secundario{ background: #000;}
+.t-blanco{ color: #fff;}
+.redondeado{ border-radius: 10px; }
+.text-centrado{ text-align: center; }
+.text-m{font-size: 1.5rem; }

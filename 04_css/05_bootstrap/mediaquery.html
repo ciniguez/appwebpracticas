@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0px; padding: 0px; color:white; text-align: center; border:1px solid red;}
+        .banner{ background: black;}
+
+        /* Para Laptos y Monitores*/
+        .titulares, .editoriales{ display: inline-block; width: 49%; color:black}
+
+        /* Par amóviles y tableta*/
+        @media only screen and ( max-width: 992px){
+            .titulares, .editoriales{  width: 100%; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="banner">Banner</div>
+    <div>
+        <div class="titulares">Titulares</div>
+        <div class="editoriales">Editoriales</div>
+    </div>
+    <div>Pie de página</div>
+</body>
+</html>
