@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Estilos</title>
+    <style>
+        .ejemplo{
+            height: 100px;
+            width: 100px;
+            border:2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ejemplo">DIV NORMAL</div>
+    <div class="ejemplo">DIV MODIFICADO</div>
+
+    <script>
+        let elemento = document.querySelector('div:nth-child(2)');
+
+        elemento.style.borderRadius= '50%';
+
+    </script>
+</body>
+
+</html>

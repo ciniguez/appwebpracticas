@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio Atributos</title>
+</head>
+<body>
+    <h1>Cambio de Atributos con JS</h1>
+    <p>Ejemplo de atributos: type, value, src, class, style, etc..</p>
+
+    <h2>Cambiando el valor de src de una imagen</h2>
+    <img src="https://picsum.photos/200/300" alt="Esta es una imagen de algo">
+
+    <h3>Haga click en cada opción para ver el resultado</h3>
+    <ul>
+        <li onclick="tieneAtributo();">Tiene atributo src?</li>
+        <li onclick="obtenerAtributo();">Dame el valor de src</li>
+        <li onclick="removerAtributo();">Quita el valor de src</li>
+        <li onclick="configurarAtributo();">Cambia de imagen</li>
+    </ul>
+
+    <script>
+        function tieneAtributo(){
+            let elemento = document.querySelector('img');
+            console.log( elemento.hasAttribute('src'));
+        }
+        function obtenerAtributo(){
+            let elemento = document.querySelector('img');
+            console.log( elemento.getAttribute('src'));
+        }
+        function removerAtributo(){
+            let elemento = document.querySelector('img');
+            elemento.removeAttribute('src');
+        }
+        function configurarAtributo(){
+            let elemento = document.querySelector('img');
+            elemento.setAttribute('src','https://picsum.photos/id/237/200/300' );
+        }
+    </script>
+</body>
+</html>

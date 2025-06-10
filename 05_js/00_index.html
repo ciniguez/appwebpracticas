@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+
+</head>
+
+<body>
+    <h1>Selectores en JS</h1>
+
+    <p id="mielemento">Rárrafo con id= mielemento</p>
+    <span>SPAN</span>
+    <p class="clase">Párrafo con clase=clase</p>
+    <div class="clase">DIV con clase = clase</div>
+
+    <h2>DIV con tres párrafos</h2>
+    <div id="principal">
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p>Parrafo 3</p>
+    </div>
+
+    <script>
+        //********** SELETORES **********//
+        // Obtener Elemento con el id "mielemento"
+        var elemento = window.document.getElementById("mielemento");
+        console.log("getElemnetoById(mielemento):" + elemento.textContent);
+        console.log("*****************************************");
+
+        //Obtener todos los elementos con la etiqueta p
+        var elementos = document.getElementsByTagName("p");
+        console.log("Parrafos encontrados :" + elementos.length);
+        for(var i=0; i< elementos.length; i++){
+            console.log("["+ i+"]: " + elementos[i].textContent);
+        }
+        console.log("*****************************************");
+
+        // Onbetner elementos con la clase "clase"
+        var elementosPorClase = document.getElementsByClassName("clase");
+        console.log("Elementos encontrados: " + elementosPorClase.length);
+        for(var i= 0; i< elementosPorClase.length; i++){
+            console.log("["+ i+"]: " + elementosPorClase[i].textContent)
+        }
+        console.log("*****************************************");
+
+        console.log("**** Selección con QuerySelector******");
+        // Obtener elemnetos con QuerySelector()
+        var elementosP = document.querySelector("#principal p");
+        console.log("Primer elmento: " + elementosP.textContent);
+
+        console.log("**** Selección con QuerySelectorAll******");
+        // Obtener elementos con QuerySelectorAll()
+        var elementosP = document.querySelectorAll("#principal p");
+        for(var i= 0; i< elementosP.length; i++){
+            console.log("["+ i+"]: " + elementosP[i].textContent)
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Contenido</title>
+</head>
+
+<body>
+    <h1>Cambio de contenido</h1>
+    <div class="miclase">DIV 1</div>
+    <div class="miclase">DIV 2</div>
+    <button onclick="cambiarContenidoHTML();">Cambiar Contenido del DIV</button>
+
+    <script>
+        function cambiarContenidoHTML(){
+            const arrayElementos = document.querySelectorAll('.miclase');
+
+            arrayElementos.forEach( elemento => {
+                elemento.textContent = "Texto de DIV cambiado";
+            } );
+
+           
+        }
+    </script>
+</body>
+
+</html>
