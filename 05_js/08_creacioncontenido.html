@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Nodos con JS</title>
+</head>
+<body>
+    <h1>Objetivo</h1>
+    <ul>
+        <li>Crear un párrafo dentro de un DIV de manera dinámica</li>
+        <li>El párrafo consta del TAG P y el texto entre los TAGS</li>
+    </ul>
+
+    <div id="contenido"></div>
+
+    <button onclick="creacionDinamica();">Inyectar Código</button>
+    <button onclick="eliminacionDinamica();">Remover Código</button>
+
+    <script>
+        function creacionDinamica(){
+            // crear nodo en memoria
+            let parrafo = document.createElement("p");
+            parrafo.setAttribute("id", "miparrafo");
+
+            //Crear nodo de tipo texto
+            let texto = document.createTextNode("Esta es un texto creado de manera dinámica");
+
+            // Al Parrafo (padre) le agrego el texto (el hijo)
+            parrafo.appendChild(texto);
+
+            // Poner el párrafo dentro del div
+            document.getElementById("contenido").appendChild(parrafo);
+
+
+        }
+        function eliminacionDinamica(){
+            let divContendor = document.getElementById("contenido");
+            let parrafo = document.getElementById("miparrafo");
+            divContendor.removeChild(parrafo);
+        }
+    </script>
+</body>
+</html>

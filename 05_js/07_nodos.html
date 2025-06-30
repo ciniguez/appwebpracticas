@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura de Nodos</title>
+</head>
+<body><p>Este es un texto</p>
+    <div>
+        <p>Párrafo 1 dentro de DIV</p>
+        <!-- este es un comnetario-->
+    </div>
+    <p>Este es un párrafo <span class="importante"> que será leído</span></p>
+</body>
+
+<script>
+    function recursividad( nodo ){
+        let arrayNodos = nodo.childNodes;
+
+        arrayNodos.forEach(element => {
+            console.log("================");
+            console.log("El nodo "+ element.nodeName + " es de tipo :(" + 
+            element.nodeType +") y su valor es :"+ element.nodeValue);
+            if(element.hasChildNodes){
+                recursividad( element );
+            }
+        });
+        
+    }
+
+    recursividad(document.body);
+</script>
+</html>

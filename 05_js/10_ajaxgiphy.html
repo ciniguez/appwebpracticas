@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" src="" alt="gif de Giphy">
+    <button onclick="cargarFichero()">Cambiar Contenido</button>
+
+    <script>
+
+       function cargarFichero(){
+            // 1.- Instanciar el objeto
+            let xhttp = new XMLHttpRequest();
+
+            //2.- Cnfiguro la solicitud
+            let sitio = "https://api.giphy.com/v1/gifs/random?"
+            let APIKey ="api_key=x9y2WSJ0J1XuNPh08po7tA51kAHJ5Bmw";
+            let query = "&tag=&rating=g";
+
+            let url = sitio + APIKey + query;
+            xhttp.open("GET", url , true);
+            xhttp.responseType = "json";
+            //3.- Asignar la función que responderá al evento cuando llegan los datos del server
+            xhttp.onreadystatechange = function(){
+                if( this.readyState==4 && this.status == 200){
+                    presentar(this.response);
+                }
+            }
+
+            //4.- Ejecutar
+            xhttp.send();
+        }
+        function presentar( response ){
+            console.log("paso");
+            console.log(response);
+            let pathImagen = response.data.images.original.url;
+            console.log(pathImagen);
+            let urlImagen = pathImagen;
+
+            document.getElementById("img").setAttribute("src", urlImagen);
+        }
+    </script>
+</body>
+</html>
