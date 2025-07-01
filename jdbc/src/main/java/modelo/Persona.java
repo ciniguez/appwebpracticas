@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import modelo.conexion.ConexionBDD;
@@ -53,7 +54,7 @@ public class Persona implements Serializable {
 	// ********* Métodos (Reglas de Negocio) *******
 
 	public Persona autorizar(String nombre, String clave) {
-		String SQL_AUTORIZAR = "SELECT * FROM PERSONA WHERE nombre = ? and clave = ?";
+		String SQL_AUTORIZAR = "SELECT * FROM persona WHERE nombre = ? and clave = ?";
 		Persona personaAutorizada = null;
 
 		PreparedStatement pstmt;
@@ -76,8 +77,31 @@ public class Persona implements Serializable {
 
 	public List<Persona> getPersonas() {
 
-		// CODIGO PARA JDBC
-		return null;
+		String SQL_SELECT = "SELECT * FROM persona";
+		
+		List<Persona> usuarios = new ArrayList<>(); // Para retornar el resultado
+		
+		PreparedStatement pstmt;
+		try {
+			pstmt = ConexionBDD.getConexion().prepareStatement(SQL_SELECT);
+
+
+			ResultSet rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				usuarios.add(new Persona(rs.getInt("id"), rs.getString("nombre"), rs.getString("clave")));
+				
+			}
+			
+			ConexionBDD.cerrar(pstmt);
+			ConexionBDD.cerrar(rs);
+			ConexionBDD.cerrar();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		
+		return usuarios;
 	}
 
 	public Persona getPersonaById(int id) {
