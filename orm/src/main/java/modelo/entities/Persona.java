@@ -56,12 +56,18 @@ public class Persona implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 
 	// ********* Métodos (Reglas de Negocio) *******
 
 
 
 
+
+	@Override
+	public String toString() {
+		return "Persona [id=" + id + ", nombre=" + nombre + ", password=" + password + "]";
+	}
 
 	public Persona getPersonaById(int id) {
 		// CODIGO PARA JDBC
