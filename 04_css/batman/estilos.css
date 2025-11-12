@@ -1,0 +1,79 @@
+*{ box-sizing: border-box;}
+section .card-container .card{
+    border: 1px dashed #333;
+    background: #FFF;
+    text-align: center;
+    width: 250px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+section .card-container{
+    display: flex;
+    justify-content: space-around;
+}
+/*.card *{ border:1px solid red}*/
+
+.card .imagen-superheroe{
+    width: 250px;
+    height: 250px;
+ }
+ .card .imagen-superheroe img{
+    width:auto;
+    height: 100%;
+ }
+
+ .card h1{ 
+    font-size: 1.8rem; 
+    font-weight: bold;
+    padding: 0px;
+}
+.card .precio-anterior{ color: #FF0000; text-decoration: line-through;}
+.card .add-button{
+    background: #0000FF;
+    border-radius:15px;
+    padding: 10px 0px;
+    margin: 10px 10px;
+}
+.card .add-button a{
+    color:white;
+    text-decoration: none;
+}
+.card .add-button:hover{
+    background: #FF0000;
+    /*cursor: pointer;*/
+}
+
+/* LOGO */ 
+
+#logo img{ width: 70px; height: 70px;}
+#logo{ display:flex}
+#logo h1{ font-size: 1.5rem;}
+header{display:flex; justify-content: space-between;}
+
+/*  avatar */
+#login .avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #FFFF00;
+    background-image: url("imagenes/batman.jpg");
+    background-size: cover;
+}
+
+/* barra de navegación */
+nav{ background: #0000FF;}
+nav ul{ 
+    list-style-type: none;
+    display:flex;
+    justify-content: space-around;
+}
+nav ul li a{ 
+    color: white; 
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav ul li{ padding: 10px 10px;}
+body{ margin:0px; font-family: Arial, Helvetica, sans-serif;}
+nav ul li:hover{ background: #FFFF00;}
+nav ul li a:hover{ color: #0000FF}
+section h1{ text-align: center;}
