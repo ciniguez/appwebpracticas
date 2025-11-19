@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMA 1: Manejadores en Linea</h1>
+    <p onclick="console.log('forma 1');">Hacer click</p>
+
+    <h1>FORMA 2: Manejadores como propiedades</h1>
+    <p>Hacer click (FORMA 2)</p>
+
+    <h1>FORMA 3: Manejadores con addEventListener</h1>
+    <p>Hacer Click (FORMA 3)</p>
+
+    <script>
+        function mensaje(){
+            console.log("Forma 2");
+        }
+        function mensajeDemo(){
+            console.log("Forma 3");
+        }
+        function mostrarTextoDelElementoHTML( elementoHTML){
+            console.log(elementoHTML.textContent);
+        }
+
+        // FORMA 2 *****/
+        var elemento1 = document.getElementsByTagName("p")[1];
+        elemento1.onclick = mensaje;
+
+        // FORMA 3 ******/
+        var elemento2 = document.getElementsByTagName("p")[2];
+        //elemento2.addEventListener('click', mostrarTextoDelElementoHTML( elemento2));
+
+        elemento2.addEventListener('click', function(){
+            mostrarTextoDelElementoHTML(this);
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.logo-img{ width:70px; height: 70px;}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border:2px solid var(--color-warning);
+    background-image: url("imagenes/batman.jpg");
+    background-size: cover;
+}
+
+.imagen-superheroe{
+    width: 250px;
+    height: 250px;
+}
+.imagen-superheroe img{
+    width: auto;
+    height: 100%;
+}
+
+.card{
+    width: 250px;
+    border-radius: 0px 0px var(--dimension-redondeado) var(--dimension-redondeado);
+}
+
+.button:hover{
+    background: var(--color-secuendario);
+}

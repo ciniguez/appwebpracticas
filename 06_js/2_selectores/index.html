@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Selectores JS</h1>
+    <p id="mielemento">Parrafo con id="mielemento"</p>
+    <span>SPAN</span>
+
+    <p class="clase">Parrafo con class=clase</p>
+    <div class="clase">Div con class=clase</div>
+
+    <h2>DIV con tres párrafos</h2>
+    <div id="principal">
+        <p>Parrfo 1</p>
+        <p>Parrfo 2</p>
+        <p>Parrfo 3</p>
+    </div>
+    <script>
+        //******** SELECTORES ******/
+        // Obtener elemento con el id "mielemento"
+        var elemento =  window.document.getElementById("mielemento");
+        console.log("Con getElementByID:" +  elemento.textContent);
+
+        // Obtener todos los elemnetos con la etiqueta p
+        var elementos = document.getElementsByTagName("p");
+        console.log("ElementsByTagName(p): " + elementos.length);
+        for( var i=0; i < elementos.length; i++){
+            console.log("["+ i + "]: " + elementos[i].textContent );
+        }
+
+        // Obtener Elementos con la clase "clase"
+        var elementosPorClase =  document.getElementsByClassName("clase");
+        console.log("Elementos con class=clase: " + elementosPorClase.length);
+        for( var i=0; i < elementosPorClase.length; i++){
+            console.log("["+ i + "]: " + elementosPorClase[i].textContent );
+        }
+
+        console.log("******************");
+        // Obtener elementos con QuerySelector
+        var elementoP = document.querySelector('#principal p');
+        console.log("QuerySelector :" + elementoP.textContent);
+        
+        console.log("******************");
+        // Obtener elementos con QuerySelectorAll
+        var elementosP = document.querySelectorAll("#principal p");
+        console.log("QuerySelectorALL :" + elementosP.length);
+        for( var i=0; i < elementosP.length; i++){
+            console.log("["+ i + "]: " + elementosP[i].textContent );
+        }
+    </script>
+    
+</body>
+</html>
