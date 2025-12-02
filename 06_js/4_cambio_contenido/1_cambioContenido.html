@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="contenido.js"></script>
+    <script src="cambioatributos.js"></script>
+    <script src="cambioclases.js"></script>
+    <style>
+        .mostrar{display:block;}
+        .ocultar{display:none;}
+        .cajaroja{border:1px solid red;}
+    </style>
+</head>
+<body>
+    <h1>Cambio de Contenido</h1>
+    <div class="miclase">DIV 1</div>
+    <div class="miclase">DIV 2</div>
+    <button onclick="cambiarContenido();">Cambiar Contenido DIVs</button>
+    <hr>
+
+
+
+    <h1>Cambio de Atributos</h1>
+    <h2>Ejemplo con img</h2>
+    <img src="https://picsum.photos/id/237/200/300" alt="">
+    <ul>
+        <li onclick="tieneAtributo();">Tiene Atributo?</li>
+        <li onclick="obtener();">Obtener el atributo</li>
+        <li onclick="eliminar();">Eliminar atributo</li>
+        <li onclick="setear();">Setear el atributo</li>
+    </ul>
+    <hr>
+
+
+     <h1>Cambio de Clases</h1>
+     <div>DIV1</div>
+     <div id="ejemplo">mostrarDIV</div>
+     <ul>
+        <li onclick="mostrar();">Mostrar</li>
+        <li onclick="ocultar();">Ocultar</li>
+        <li onclick="agregar();">Agregar</li>
+        <li onclick="eliminarClase();">Eliminar</li>
+     </ul>
+</body>
+</html>
