@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        Este es el encabezado
+    </header>
+    <main>
+        <p>Aquí tengo un DIV sin contenido. La idea es llenarlo con lo que viene del JSON</p>
+        <div id="datos"></div>
+
+        <button onclick="obtenerDatos();">Llenar DIV</button>
+    </main>
+    <footer>
+        Este es el footer
+    </footer>
+
+    <script>
+        function obtenerDatos(){
+            var htr =  new XMLHttpRequest();
+            htr.open( "GET", "ficheroJSON.json", true);
+            htr.responseType ="json";
+
+            htr.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.response);
+
+                    var elementoUL = document.createElement("UL");
+                    
+                    this.response.list.forEach(element => {
+                        var elementoLI = document.createElement("LI");
+                        var texto = document.createTextNode(element.item);
+
+                        elementoLI.appendChild(texto);
+                        elementoUL.appendChild(elementoLI);
+                    });
+
+                    document.getElementById("datos").appendChild(elementoUL);
+                } 
+            }
+            htr.send(); //Aquí se hace el REQUEST (solicitud)
+
+        }
+    </script>
+</body>
+</html>

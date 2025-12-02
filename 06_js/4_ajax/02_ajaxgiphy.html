@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi página con gifs de otro sitio web</h1>
+
+    <img id="img" src="" alt="gif de Giphy">
+
+    <button onclick="cargarGifs();">Llenar contenido</button>
+
+    <script>
+        function cargarGifs(){
+            var htr = new XMLHttpRequest();
+
+            // Informacion de la fuente
+            let sitio = "https://api.giphy.com/v1/gifs/random?";
+            let API_KEY = "api_key=x9y2WSJ0J1XuNPh08po7tA51kAHJ5Bmw";
+            let query = "&tag=&rating=g";
+
+            let url = sitio + API_KEY + query;
+
+            htr.open("GET", url, true);
+            htr.responseType= "json";
+            htr.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    //console.log(this.response);
+                    presentar(this.response);
+                }
+            }
+            htr.send();
+        }
+
+        function presentar( response ){
+            let pathImagen = response.data.images.original.url;
+            document.getElementById("img").setAttribute("src", pathImagen);
+        }
+    </script>
+</body>
+</html>
