@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <style>
+        .mostrar{display:block;}
+        .ocultar{display:none;}
+        .cajaroja{border:1px solid red;}
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Cambio de Clases</h1>
+     <div>DIV1</div>
+     <div id="ejemplo">mostrarDIV</div>
+     <ul>
+        <!--
+        <li onclick="mostrar();">Mostrar</li>
+        <li onclick="ocultar();">Ocultar</li>
+        <li onclick="agregar();">Agregar</li>
+        <li onclick="eliminarClase();">Eliminar</li>
+        -->
+        <li id="btnMostrar">Mostrar</li>
+        <li id="btnOcultar">Ocultar</li>
+        <li id="btnAgregar">Agregar</li>
+        <li id="btnEliminar">Eliminar</li>
+     </ul>
+
+     <h1>Uso de AJAX con JQuery</h1>
+     <header>
+        Este es el encabezado
+    </header>
+    <main>
+        <p>Aquí tengo un DIV sin contenido. La idea es llenarlo con lo que viene del JSON</p>
+        <div id="datos"></div>
+
+        <button id="btnObtenerDatos">Llenar DIV</button>
+    </main>
+    <footer>
+        Este es el footer
+    </footer>
+
+</body>
+</html>
