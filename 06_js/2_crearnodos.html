@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetivo</h1>
+    <p>Crear un párrafo dentro de un DIV de manera dinámica</p>
+    <p>El párrafo consta dle TAG "p" y el texto entre los TAGS</p>
+
+    <div id="contenido"></div>
+
+    <button onclick="creacionDinamica();">Inyectar codigo</button>
+    <button onclick="eliminacionDinamica();">Remover codigo</button>
+    
+    <script>
+        function creacionDinamica(){
+            // Creamos nodo de tipo Element
+            var parrafo = document.createElement("p");
+            parrafo.setAttribute("id", "miparrafo");
+
+            // Crear nodo de tipo Text
+            var texto = document.createTextNode("Esta es una creación dinamica");
+
+            // Añado el TExto al párrafo
+            parrafo.appendChild(texto);
+
+            //Añadir el párrafo al DIV
+            var div = document.getElementById("contenido");
+            div.appendChild(parrafo);
+        }
+
+        function eliminacionDinamica(){
+            var divContenedor = document.getElementById("contenido");
+            var parrafo =  document.getElementById("miparrafo");
+
+            divContenedor.removeChild(parrafo);
+        }
+    </script>
+</body>
+</html>
