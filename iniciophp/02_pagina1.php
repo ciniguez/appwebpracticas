@@ -1,7 +1,7 @@
 <html>
     <head></head>
     <body>
-        <form method="POST" action="03_pagina2.php">
+        <form method="GET" action="03_pagina2.php">
             <fieldset>
                 <label>Nombre</label>
                 <br>
