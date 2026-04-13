@@ -121,7 +121,7 @@ class Persona {
         
         $valores[] = $this->getId();
         
-        $sql = "UPDATE persona SET " . implode(", ", $campos) . " WHERE id = ?";
+	        $sql = "UPDATE persona SET " . implode(", ", $campos) . " WHERE id = ?";
         
         try {
 			$cnn = new ConexionBDD();
