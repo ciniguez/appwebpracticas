@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Encabezado de nivel 1</h1>
+        <h2>Encabezado de nivel 2</h2>
+        <h3>Encabezado de nivel 3</h3>
+        <h4>Encabezado de nivel 4</h4>
+        <h5>Encabezado de nivel 5</h5>
+        <h6>Encabezado de nivel 6</h6>
+    </header>
+
+    <main>
+        <!-- párrafos -->
+        <p>Este es un párrafo de ejemplo.</p>
+        <p>Este es otro párrafo de ejemplo.</p>
+    </main>
+
+    <!-- enlaces -->
+    <a href="https://fis.epn.edu.ec" target="_blank">Este es un enlace de ejemplo</a>
+
+    <section>
+        <!-- Tablas -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nombre</td>
+                    <td>Cédula</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Carlos Iñiguez</td>
+                    <td>0987352416</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Carlos Villalba</td>
+                    <td>113456789</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <img src="/img/scooby.png" alt="Imagen de Scooby Doo" />
+
+    <section>
+        <h2>Listas</h2>
+        <h3>Lista ordenada</h3>
+        <ol>
+            <li>Primer elemento</li>
+            <li>Segundo elemento</li>
+            <li>Tercer elemento</li>
+        </ol>
+        <h3>Lista desordenada</h3>
+        <ul>
+            <li>Primer elemento</li>
+            <li>Segundo elemento
+                <ul>
+                    <li>Elemento 2.1</li>
+                    <li>Elemento 2.2</li>
+                    <li>Elemento 2.3</li>
+                </ul>
+            </li>
+            <li>Tercer elemento</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Controles de Formulario en HTML5</h2>
+        
+        <form action="">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" 
+            placeholder="Ingrese su nombre" required><br>
+            <label for="email">Correo:</label><br>
+            <input type="email" name="email" placeholder="example@epn.edu.ec" required>
+            <br><label for="clave">Contraseña:</label><br>
+            <input type="password" name="clave" required>
+
+            <br>
+            <label for="telefono">Teléfono (9 digitos comenzando por 9, 8,7o 6)</label>
+            <input type="tel" name="telefono" pattern="[9876][0-9]{8}" required>
+
+            <br><br>
+            <input type="submit" value="Enviar">
+
+        </form>
+
+    </section>
+
+    <footer>
+        Pie de pagina
+    </footer>
+
+</body>
+
+</html>
