@@ -1,0 +1,35 @@
+.caja{
+    border: 1px dashed #AAA;
+    width: 250px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.alineado-centro{
+    text-align: center;
+}
+.fuente-general{
+font-family: Arial, Helvetica, sans-serif;
+}
+.color-rojo{
+    color:#FF0000;
+}
+.text-decoration-line{
+    text-decoration:line-through;
+}
+.btn-compra{
+    background: #0000FF;
+    color: #FFF;
+    border-radius: 5px;
+    
+    /*
+    width:200px;
+    height: 45px;
+    */
+    padding: 10px 20px;
+    margin: 10px 20px;
+}
+
+.imagen-superheroe{
+    width: 250px;
+    height: 250px;
+}
