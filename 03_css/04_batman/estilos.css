@@ -1,3 +1,4 @@
+body{ margin:0px}
 .caja{
     border: 1px dashed #AAA;
     width: 250px;
@@ -32,4 +33,39 @@ font-family: Arial, Helvetica, sans-serif;
 .imagen-superheroe{
     width: 250px;
     height: 250px;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    background: hsl(120 100% 50%);
+    padding: 20px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.f-size-m{ font-size: 1.2rem; }
+.text-color-titulos{ color: hsl(120 100% 15%) }
+.rounded{ border-radius: 15px;}
+.p-m{ padding: 8px;}
+.p-l{ padding:16px;}
+.p-xl{ padding:32px;}
+.btn{
+    background: hsl(120 100% 15%);
+    color: #FFFF00;
+    padding: 8px 16px;
+    border-radius: 15px;
+    border:none;
+
+}
+input[type=text], input[type=password]{
+    padding: 8px 3px;
+    border:none;
+    border-radius: 15px;
+}
+
+.comics{
+    display:flex;
+    justify-content:space-around;
+    gap: 10px;
+    flex-wrap: wrap;
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamineto en FLEX</title>
+    <style>
+        *{ border: 1px solid #ff0000} /* Borde a todos los elemntos de HTML*/
+        body{ margin: 0px} /* Quitar el brode del Body*/
+
+        /*  Esilo a las cajas del main*/
+        .main > div{
+            box-sizing: border-box;
+            background: #0000FF;
+            color: #FFFFFF;
+            width: 50px;
+            height: 50px;
+        }
+        .container{
+            display:flex;
+            flex-direction:column;
+            margin: 0px 20px;
+        }
+        .main{
+            display:flex;
+            flex-direction: row;
+            flex-flow: wrap;
+            row-gap: 10px;
+            column-gap: 10px;
+
+            /* ALINEACION, JUSTIFICAION y DISTRIBUCION */
+            justify-content:space-between;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="banner">Banner</div>
+        <div id="cuerpo">
+            <div class="main">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+            <div id="lateral"></div>
+        </div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>
