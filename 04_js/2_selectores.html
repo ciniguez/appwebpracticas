@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores en JS</title>
+</head>
+<body>
+    <h1>Selectores</h1>
+    <p id="mielemento">Parrafo con id=mielemento</p>
+    <span>SPAN</span>
+    <p class="miclase">Parrafo con clase=miclase</p>
+    <div class="miclase">Div con clase = miclase</div>
+
+    <h2>DIV con tres parrafos</h2>
+    <div id="principal">
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p>Parrafo 3</p>
+    </div>
+    <script>
+        // ********* SELETORES ********//
+        // Obtener Elemento con el id ="mielemento"
+        var elemento = document.getElementById('mielemento');
+        console.log(elemento.textContent);
+        console.log("**************");
+
+        //Obtener todos los elemntos con la etiqueta P
+        var elementosP = document.getElementsByTagName('p');
+        console.log('Elementos P encontrados :' + elementosP.length);
+        for(var i= 0; i< elementosP.length; i++){
+            console.log(elementosP[i].textContent)
+        }
+
+        //Obtener todosl los elementos con la clase "miclase"
+        console.log("*******************************");
+        var elementosClase = document.getElementsByClassName("miclase");
+        console.log("Elementos con clase miclase: " + elementosClase.length);
+        for(var i = 0; i< elementosClase.length; i++){
+            console.log(elementosClase[i].textContent);
+        }
+        console.log("********QUERY SELETOR **********************");
+        //Obtener elemnetos con querySelector
+        var elementoP = document.querySelector("#principal p");
+        console.log(elementoP.textContent);
+        
+        
+        console.log("**********QUERY SELETOR ALL *********************");
+         //Obtner elemenots con querySelectorAll
+         var arrayElemnentosP = document.querySelectorAll("#principal p");
+         for(var i=0; i<arrayElemnentosP.length; i++){
+            console.log(arrayElemnentosP[i].textContent);
+         }
+
+
+    </script>
+</body>
+</html>

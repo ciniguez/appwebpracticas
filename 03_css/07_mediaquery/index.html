@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaQuery</title>
+    <style>
+        *{margin:0px; padding:0px; color:white; text-align: center;}
+
+        .banner{background: black;}
+        .titulares{background: blue;}
+        .editoriales{background: red;}
+
+        /* Para laptops y Moniters */
+        .titulares, .editoriales { display: inline-block; width:49%}
+    
+        /* Para Moviles y Tableta*/
+
+        @media only screen and ( max-width:992px){
+            .titulares, .editoriales { width: 100%}
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">Banner</div>
+    <div>
+        <div class="titulares">Titulares</div>
+        <div class="editoriales">Editoriales</div>
+    </div>
+    <div>Pie de pagina</div>
+</body>
+</html>
