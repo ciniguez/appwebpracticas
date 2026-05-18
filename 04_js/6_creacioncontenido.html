@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion contenido</title>
+</head>
+<body><section>
+        <h1>Lectura de Nodos</h1>
+        <p>Este es un Parrafo</p>
+        <div>
+            <p>Este es otro Parrafo dentro de un div</p>
+            <!-- Este es un comentario dentro del div  -->
+        </div>
+        <button onclick="recursividad(document.body);">Leer Nodos</button>
+    </section>
+    
+    <section>
+        <h1>Creacion de Nodos</h1>
+        <p>Crear un párrafo dentro de un DIV de manera dinámica</p>
+
+        <div id="contenedor"></div>
+
+        <button onclick="creacionDinamica()"> Inyectar código</button>
+        <button onclick="eliminacionDinamica()"> Remover código</button>
+
+    </section>
+    
+    <section>
+        <h1>AJAX</h1>
+    </section>
+    <script src="6_script.js"></script>
+</body>
+</html>

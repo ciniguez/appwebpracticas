@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    X:<input type="text" id="ejeX" value="Hola">
+    Y:<input type="text" id="ejeY">
+
+    <script>
+        document.addEventListener('mousemove', function(){
+            var x = window.event.clientX;
+            var y = window.event.clientY;
+
+            document.getElementById("ejeX").value= x;
+            document.getElementById("ejeY").value= y;
+
+
+
+        });
+    </script>
+</body>
+</html>

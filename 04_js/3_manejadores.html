@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejadores</title>
+    <script>
+        function mostrarMensaje() {
+            console.log("Hiciste Clic");
+        }
+        function mostrarMensajeDelElementoHTML( elementoHTML){
+            console.log(elementoHTML.textContent);
+        }
+
+        function inicializar() {
+            var pForma2 = document.getElementById('forma2');
+            pForma2.onclick = mostrarMensaje;
+
+            var pForma3 = document.getElementById('forma3');
+            pForma3.addEventListener('click', mostrarMensaje);
+
+            var pForma4 = document.getElementById('forma4');
+           /* pForma4.onclick = mostrarMensajeDelElementoHTML( pForma4 );*/
+
+            pForma4.onclick = function(){
+                 mostrarMensajeDelElementoHTML( this );
+            }
+
+
+        }
+
+        window.onload= inicializar;
+
+
+    </script>
+</head>
+
+<body>
+    <h1>FORMA 1: Manejadores en Linea</h1>
+    <p onclick="console.log('Manejador en linea')">Haz clic</p>
+
+    <h1>FORMA 2: Manejadores como propiedades</h1>
+    <p id="forma2">Hacer Clic (Forma 2)</p>
+
+    <h1>FORMA 3: Manejadores con addEventListener</h1>
+    <p id="forma3">Hacer Clic (forma3)</p>
+
+    <h1>USO DE FUNCION ANONIMA:</h1>
+    <p id="forma4">Hacer Clic (forma4)</p>
+
+</body>
+
+</html>
