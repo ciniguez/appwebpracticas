@@ -1,1 +1,0 @@
-console.log('Este es u mensaje escrto desde fichero externo');
