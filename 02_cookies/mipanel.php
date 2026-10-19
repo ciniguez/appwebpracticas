@@ -1,5 +1,6 @@
 <?php
 
+
 if($_SERVER['REQUEST_METHOD'] !== 'POST'){
     header("Location: index.php");
     exit;
@@ -48,8 +49,8 @@ else{
         <h1>PANEL PRINCIPAL</h1>
         <p>Bienvenido :<?php echo $nombre;?> </p>
         <hr>
-        <a href="borrarcookies.php">Borrar cookies y regresar</a>
+        <a href="borrarcookies.php?borrar=1">Borrar cookies y regresar</a>
         <br>
-        <a href="borrarcookies.php"> Regresar </a>
+        <a href="borrarcookies.php?borrar=0"> Regresar </a>
     </body>
 </html>
