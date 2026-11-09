@@ -22,6 +22,7 @@
             margin-bottom: 10px;
         }
     </style>
+    
 
 </head>
 
@@ -37,7 +38,9 @@
                     <li>Incorporando JS desde un fichero externo</li>
                 </ul>
             </div>
-            <p>Incorporando JS de manera Embebida y llamada en window.onload!</p>
+            <p onclick="console.log('¡Hola, mundo!')">Incorporando JS de manera Embebida y llamada en window.onload!</p>
+            <p onclick="mostrarAlerta()">Hazme Click</p>
+            <p onclick="saludar()">Desde fichero externo</p>
         </section>
 
 
@@ -78,16 +81,25 @@
                 </ul>
             </div>
             <h4>FORMA 1: Manejadores en Línea</h4>
-            <p>Hacer Clic! (FORMA 1)</p>
+            <p onclick="saludar()">Hacer Clic! (FORMA 1)</p>
 
             <h4>FORMA 2: Manejadores como propiedades</h4>
-            <p>Hacer Clic! (FORMA 2)</p>
+            <p id="forma2">Hacer Clic! (FORMA 2)</p>
 
             <h4>FORMA 3: Manejadores con addEventListener()</h4>
-            <p>Hacer Clic! (FORMA 3)</p>
+            <p id="forma3">Hacer Clic! (FORMA 3)</p>
+
+            <h4>Tarea</h4>
+            <p id="nombre">Carlos</p>
         </section>
     </main>
 
+    <script>
+        function mostrarAlerta(){
+            console.log("Hola desde la manera enbebida");
+        }
+    </script>
+    <script src="fichero.js"></script>
 </body>
 
 </html>
