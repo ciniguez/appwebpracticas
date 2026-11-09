@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+        .explicacion {
+            background-color: #d9e4b2;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Incorporando JS en HTML</h1>
+            <div class="explicacion">
+                <p>Existen tres formas de incorporar JavaScript en un documento HTML:</p>
+                <ul>
+                    <li>Incorporando JS de manera Embebida y llamada en window.onload</li>
+                    <li>Incorporando JS en Línea</li>
+                    <li>Incorporando JS desde un fichero externo</li>
+                </ul>
+            </div>
+            <p>Incorporando JS de manera Embebida y llamada en window.onload!</p>
+        </section>
+
+
+        <section>
+            <h1>Uso de Selectores JS</h1>
+
+            <div class="explicacion">
+                <p>Tres selectores de JavaScript:</p>
+                <ul>
+                    <li>document.getElementById()</li>
+                    <li>document.getElementsByClassName()</li>
+                    <li>document.getElementsByTagName()</li>
+                </ul>
+            </div>
+
+            <p id="mielemento"> Párrafo con id="mielemento"</p>
+            <span>SPAN</span>
+            <p class="clase">Párrafo con class="clase"</p>
+            <div class="clase">Div con class="clase"</div>
+
+            <h4>DIV con tres párrafos</h4>
+            <div id="principal">
+                <p>Parrafo 1</p>
+                <p>Parrafo 2</p>
+                <p>Parrafo 3</p>
+            </div>
+        </section>
+
+        <section>
+            <h1>Manejadores de Eventos</h1>
+            <div class="explicacion">
+                <p>El manejador es el código que se ejecuta en respuesta a un evento en la página web. 
+                    <br>Tres formas de incorporar manejadores en JS</p>
+                <ul>
+                    <li>Embebida</li>
+                    <li>En Línea</li>
+                    <li>Desde un fichero externo</li>
+                </ul>
+            </div>
+            <h4>FORMA 1: Manejadores en Línea</h4>
+            <p>Hacer Clic! (FORMA 1)</p>
+
+            <h4>FORMA 2: Manejadores como propiedades</h4>
+            <p>Hacer Clic! (FORMA 2)</p>
+
+            <h4>FORMA 3: Manejadores con addEventListener()</h4>
+            <p>Hacer Clic! (FORMA 3)</p>
+        </section>
+    </main>
+
+</body>
+
+</html>
