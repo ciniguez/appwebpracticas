@@ -1,0 +1,13 @@
+nav{
+    font-size: 1.2rem;
+    background-color: #0000FF;
+}
+ul{
+    list-style-type:none;
+    display:flex;
+    justify-content:space-around;
+}
+a{
+    text-decoration:none;
+    color:#FFFFFF;
+}
