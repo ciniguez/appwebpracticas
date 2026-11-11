@@ -1,0 +1,61 @@
+  body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px 10px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #ddd;
+        }
+
+        h1 {
+            margin: 0px;
+            padding: 10px;
+        }
+        h2{ color: hsl(0, 100%, 23%)}
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        section {
+            border: 1px solid hsl(0, 10%, 80%);
+            background: #eee;
+            padding: 5px;
+        }
+
+
+        .mensaje {
+            color: red;
+        }
+
+        .ejemplo {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+
+        .mostrar {
+            display: block;
+        }
+
+        .ocultar {
+            display: none;
+        }
+
+        .cajaroja {
+            border: 1px solid red;
+        }
+
+        .nota {
+            background-color: beige;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8rem;
+        }
+
+        .d-flex{ display:flex}
+        .flex-gap{ gap: 10px}
+        .btnContainer{ padding: 10px 0px}

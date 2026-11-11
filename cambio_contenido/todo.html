@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Contenido con JS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cambio de contenido</h1>
+    </header>
+
+    <div class="contenedor">
+    
+            <section>
+                <h2>Sección 1: Cambiar el texto de un elemento</h2>
+                <p class="nota">Uso de la propiedad textContent</p>
+
+                <div class="btnContainer">
+                    <button onclick="cambiarContenidoElementoHTML();">Cambiar Contenido DIVs</button>
+                </div>
+                
+                <div>Este es un texto que NO cambiará al ejecutar la acción.</div>
+                <div class="miclase">Este es un texto que SI cambiará al ejecutar la acción</div>
+                
+                
+                
+            </section>
+
+
+            <section>
+                <h2>Sección 2: Atributos</h2>
+
+                <div>
+                    <div class="nota">
+                        <p>Cambio de atributos (src, href, class, type, class, id, style, ..) del elemento HTML.
+                            Uso de metodos:
+                            <ul>
+                                <li>hasAttribute('atributo')</li>
+                                <li>getAttribute('atributo')</li>
+                                <li>removeAttribute('atributo')</li>
+                                <li>setAttribute('atributo', valor)</li>
+                            </ul>
+                        </p>
+                    </div>
+    
+                    <div>
+                        <p>En este ejemplo vamos a cambiar el atributo 'src' a una imagen</p>
+                        <div class="btnContainer">
+                            <button onclick="tieneAtributo();">Tiene atributo?</button>
+                            <button onclick="obtenerAtributo();">Obtener el atributo</button>
+                            <button onclick="removerAtributo();">Eliminar</button>
+                            <button onclick="configurarAtributo();">Configurar</button>
+                        </div>
+
+                        <img src="https://picsum.photos/300/100">
+                        <p><span style="color: #aaa;">Instrucciones:</span> Haga clic en cada funcion para ver el resultado</p>
+                        <div class="mensaje"></div>
+                    </div>
+                </div>
+                
+                
+                
+            </section>
+ 
+
+
+            <section>
+                <h2>Sección 3: Clases</h2>
+                <div class="nota">
+                    <p>Uso de métodos:</p>
+                    <ul>
+                        <li>classList.replace</li>
+                        <li>classList.add</li>
+                        <li>classList.contains</li>
+                        <li>classList.remove</li>
+                    </ul>
+                </div>
+                <div class="btnContainer">
+                    <button onclick="mostrar();">Mostrar elemento</button>
+                    <button onclick="ocultar();">Oculte elemento</button>
+                    <button onclick="agregarClase();">Agregar clase</button>
+                    <button onclick="removerClase();">Eliminar clase</button>
+                </div>
+                
+                <div>DIV1</div>
+                <div id="div_ejemplo" class="mostrar">DIV2</div>
+
+            </section>
+
+
+            <section>
+                <h2>Sección 4: Estilos </h2>
+                <!--div style="height: 100px; width: 100px; border:2px solid black">DIV</div-->
+
+                <div class="nota">
+                    <p>Dos formas: 1) Usando setAttribute. 2) como propiedades usando camelCase</p>
+                </div>
+                <div class="btnContainer">
+                    <button onclick="cambiarColorBorde();"> Cambiar Color Borde</button>
+                </div>
+                
+                <div class="d-flex flex-gap">
+                    <div class="ejemplo">DIV NORMAL</div>
+                    <div class="ejemplo">DIV MODIFICADO</div>
+                </div>
+            </section>
+   
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
