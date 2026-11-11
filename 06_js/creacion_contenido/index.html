@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Contenido</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Creación de contenido</h1>
+    </header>
+    <div class="contenedor">
+
+
+
+        <section>
+            <h2>Seccion 1: Lectura de Nodos</h2>
+            <div class="nota">
+                <ul>
+                    <li>Uso de propiedades: nodetype, parentNode, nodeValue, nodeName, childNodes, hasChildNodes()</li>
+                    <li>Uso de función recursiva (función flecha)</li>
+                </ul>
+                
+            </div>
+            <p>Este es un texto</p>
+            <div>
+                <p>Párrafo 1 dentro de DIV</p>
+                <!-- este es un comentario -->
+            </div>
+            <div class="btnContainer">
+                <button onclick="recursividad(document.body);">Leer Nodos (Mira la Consola)</button>
+            </div>
+        </section>
+
+
+
+        <section>
+            <h2>Seccion 2: Crear Nodos</h2>
+            <div class="nota">
+                Uso de funciones: createElement, createTextNode, appendChild, removeChild
+            </div>
+            <p>Crear un párrafo (&lt;p&gt;&lt;/p&gt;) dentro de un DIV de manera dinámica</p>
+
+            <div id="contenedor"></div>
+
+            <div class="btnContainer">
+                <button onclick="creacionDinamica();">Inyectar código</button>
+                <button onclick="eliminacionDinamica();">Remover código</button>
+            </div>
+        </section>
+
+
+
+        <section>
+            <h2>Seccion 3: Uso de AJAX</h2>
+            <div class="nota">
+                Este ejemplo carga los datos de un fichero de texto (.txt) con AJAX
+            </div>
+            <div id="demo">
+                <p>Haz click en el botón para cambiar este texto con el contenido del fichero</p>
+            </div>
+            <div class="btnContainer">
+                <button onclick="cargarFichero();">Cambiar Contenido</button>
+            </div>
+
+        </section>
+
+
+
+        <section>
+            <h2>Seccion 4: Contenido JSON obtenido</h2>
+            <div class="nota">
+                Este ejemplo carga los datos de un JSON utilizando AJAX
+            </div>
+            <div id="datos"></div>
+            <div class="btnContainer">
+                <button onclick="obtenerDatos();">Obtener Datos</button>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

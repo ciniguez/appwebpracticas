@@ -1,0 +1,25 @@
+{
+    "list":[
+      {
+        "item":"Gestión de auditoría",
+        "Nombre":"Carlos",
+        "estudios":[
+          {
+            
+          }
+        ]
+      },
+      {"item":"Gestión de menús"},
+      {"item":"Gestión de pedidos"},
+      {"item":"Gestión de contratos"},
+      {"item":"Gestion de logistica"},
+      {"item":"Administración"},
+      {"item":"Gestión de recursos humanos"},
+      {"item":"Gestión de compras"},
+      {"item":"Gestión mayorista"},
+      {"item":"Gestion de seguridad"},
+      {"item":"Administración de cuentas"},
+      {"item":"Gestión financiera"},
+      {"item":"Otra gestión"}
+    ]
+  }
